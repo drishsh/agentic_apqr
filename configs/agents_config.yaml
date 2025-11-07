@@ -1,0 +1,258 @@
+# APQR System Agent Configuration
+# Configuration for agent endpoints, tools, and permissions
+# Path: /AGENT/AGENT/apqr-system/configs/agents_config.yaml
+
+system:
+  name: "APQR Agentic System"
+  version: "1.0.0"
+  description: "Advanced Pharmaceutical Quality & Records Management System"
+  environment: "development"
+  base_path: "/AGENT/AGENT/apqr-system"
+
+# Root Orchestrator Configuration
+orchestrator:
+  name: "root_agent"
+  module: "agent"
+  description: "Main root agent that routes queries to specialized agents"
+  enabled: true
+  timeout_seconds: 30
+  max_retries: 3
+  routing_strategy: "keyword_based"  # Options: keyword_based, ml_based, hybrid
+
+# Compiler Configuration
+compiler:
+  name: "compiler"
+  module: "compiler"
+  description: "Synthesizes and compiles responses from multiple agents"
+  enabled: true
+  max_summary_length: 500
+  enable_contradiction_detection: true
+  deduplication_strategy: "content_hash"  # Options: content_hash, semantic_similarity
+  prioritization_method: "relevance_score"  # Options: relevance_score, agent_confidence, hybrid
+
+# Main Agents Configuration
+agents:
+  # LIMS Agent - Laboratory Information Management System
+  lims:
+    name: "LIMS"
+    description: "Laboratory Information Management System agent"
+    enabled: true
+    module: "agents.lims_agent"
+    class: "LIMSAgent"
+    
+    # Endpoint configuration (for HTTP/gRPC deployment)
+    endpoint:
+      type: "local"  # Options: local, http, grpc
+      url: "http://localhost:8001/lims"  # Used when type is http/grpc
+      
+    # Keywords for routing queries to this agent
+    routing_keywords:
+      - "assay"
+      - "test"
+      - "lab"
+      - "laboratory"
+      - "quality control"
+      - "qc"
+      - "analysis"
+      - "analytical"
+      - "specification"
+      - "spec"
+      - "lot"
+      - "batch testing"
+      - "stability"
+      - "oos"
+      - "out of specification"
+      - "result"
+      - "coa"
+      - "certificate of analysis"
+      - "dissolution"
+      - "chromatography"
+      - "hplc"
+    
+    # Tools available to this agent
+    tools:
+      - "test_result_lookup"
+      - "specification_check"
+      - "oos_investigation"
+      - "stability_data_retrieval"
+      - "coa_generation"
+      - "pdf_parser"
+      - "xlsx_parser"
+    
+    # Permissions
+    permissions:
+      read: true
+      write: false
+      delete: false
+      admin: false
+    
+    # Database/Data source configuration
+    data_sources:
+      - type: "database"
+        name: "lims_db"
+        connection_string: "${LIMS_DB_CONNECTION}"  # Environment variable
+      - type: "document_store"
+        name: "lims_documents"
+        path: "./data/lims/"
+  
+  # ERP Agent - Enterprise Resource Planning
+  erp:
+    name: "ERP"
+    description: "Enterprise Resource Planning agent"
+    enabled: true
+    module: "agents.erp_agent"
+    class: "ERPAgent"
+    
+    # Endpoint configuration
+    endpoint:
+      type: "local"
+      url: "http://localhost:8002/erp"
+      
+    # Keywords for routing queries to this agent
+    routing_keywords:
+      - "grn"
+      - "goods receipt note"
+      - "batch"
+      - "manufacturing"
+      - "production"
+      - "bmr"
+      - "bpr"
+      - "batch manufacturing record"
+      - "batch production record"
+      - "procurement"
+      - "purchase"
+      - "order"
+      - "vendor"
+      - "supplier"
+      - "training"
+      - "qualification"
+      - "personnel"
+      - "employee"
+      - "capa"
+      - "corrective action"
+      - "preventive action"
+      - "deviation"
+      - "audit"
+    
+    # Tools available to this agent
+    tools:
+      - "grn_lookup"
+      - "batch_record_retrieval"
+      - "training_record_search"
+      - "capa_management"
+      - "procurement_tracking"
+      - "pdf_parser"
+      - "docx_parser"
+      - "xlsx_parser"
+    
+    # Permissions
+    permissions:
+      read: true
+      write: false
+      delete: false
+      admin: false
+    
+    # Database/Data source configuration
+    data_sources:
+      - type: "database"
+        name: "erp_db"
+        connection_string: "${ERP_DB_CONNECTION}"
+      - type: "document_store"
+        name: "erp_documents"
+        path: "./data/erp/"
+  
+  # DMS Agent - Document Management System
+  dms:
+    name: "DMS"
+    description: "Document Management System agent"
+    enabled: true
+    module: "agents.dms_agent"
+    class: "DMSAgent"
+    
+    # Endpoint configuration
+    endpoint:
+      type: "local"
+      url: "http://localhost:8003/dms"
+      
+    # Keywords for routing queries to this agent
+    routing_keywords:
+      - "sop"
+      - "standard operating procedure"
+      - "document"
+      - "protocol"
+      - "procedure"
+      - "guideline"
+      - "policy"
+      - "validation"
+      - "qualification"
+      - "cleaning"
+      - "process"
+      - "method"
+      - "instruction"
+      - "manual"
+      - "form"
+      - "template"
+      - "record"
+      - "log"
+      - "capa document"
+    
+    # Tools available to this agent
+    tools:
+      - "sop_search"
+      - "protocol_retrieval"
+      - "document_version_control"
+      - "validation_doc_access"
+      - "document_indexing"
+      - "pdf_parser"
+      - "docx_parser"
+      - "ocr_processor"
+    
+    # Permissions
+    permissions:
+      read: true
+      write: false
+      delete: false
+      admin: false
+    
+    # Database/Data source configuration
+    data_sources:
+      - type: "database"
+        name: "dms_db"
+        connection_string: "${DMS_DB_CONNECTION}"
+      - type: "document_store"
+        name: "dms_documents"
+        path: "./data/dms/"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    - type: "console"
+      enabled: true
+    - type: "file"
+      enabled: true
+      filename: "logs/apqr_system.log"
+      max_bytes: 10485760  # 10MB
+      backup_count: 5
+
+# Performance & Optimization
+performance:
+  enable_caching: true
+  cache_ttl_seconds: 3600
+  parallel_agent_execution: true
+  max_concurrent_agents: 3
+  request_timeout_seconds: 30
+
+# Security Configuration
+security:
+  enable_authentication: false  # Set to true in production
+  enable_rate_limiting: false
+  max_requests_per_minute: 60
+  enable_audit_logging: true
+
+# Testing Configuration
+testing:
+  mock_mode: false  # Set to true for testing with mock data
+  test_data_path: "./tests/test_data/"
+  enable_test_logging: true

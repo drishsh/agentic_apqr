@@ -1,0 +1,186 @@
+# ERP Tools Configuration
+# Tool names, parameters, and settings for ERP sub-agents
+# Path: /AGENT/AGENT/apqr-system/configs/erp_tools.yaml
+
+erp_tools:
+  version: "1.0.0"
+  description: "ERP sub-agent tools configuration"
+  
+  # Manufacturing Sub-Agent Tools
+  manufacturing_tools:
+    bmr_analyzer:
+      name: "BMR_Analyzer"
+      description: "Parse and analyze Batch Manufacturing Records"
+      parameters:
+        - name: "batch_id"
+          type: "string"
+          required: false
+          description: "Batch or lot ID to analyze"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product name filter"
+      output_format: "json"
+      confidence_threshold: 0.90
+      
+    yield_reconciliation_tool:
+      name: "Yield_Reconciliation_Tool"
+      description: "Calculate and reconcile batch yields"
+      parameters:
+        - name: "batch_id"
+          type: "string"
+          required: true
+          description: "Batch ID for yield calculation"
+      output_format: "json"
+      confidence_threshold: 0.88
+      
+    deviation_log_interpreter:
+      name: "Deviation_Log_Interpreter"
+      description: "Analyze manufacturing deviations"
+      parameters:
+        - name: "time_range"
+          type: "string"
+          required: false
+          default: "12 months"
+          description: "Time range for deviation analysis"
+        - name: "severity"
+          type: "string"
+          required: false
+          enum: ["Critical", "Major", "Minor"]
+          description: "Filter by severity"
+      output_format: "json"
+      confidence_threshold: 0.85
+  
+  # Engineering Sub-Agent Tools
+  engineering_tools:
+    equipment_calibration_extractor:
+      name: "Equipment_Calibration_Extractor"
+      description: "Track equipment calibration status"
+      parameters:
+        - name: "equipment_id"
+          type: "string"
+          required: false
+          description: "Equipment ID"
+        - name: "status"
+          type: "string"
+          required: false
+          enum: ["Current", "Due", "Overdue"]
+          description: "Calibration status filter"
+      output_format: "json"
+      confidence_threshold: 0.93
+      
+    maintenance_log_reader:
+      name: "Maintenance_Log_Reader"
+      description: "Parse maintenance history and logs"
+      parameters:
+        - name: "equipment_id"
+          type: "string"
+          required: false
+          description: "Equipment ID"
+        - name: "maintenance_type"
+          type: "string"
+          required: false
+          enum: ["Preventive", "Corrective", "Breakdown"]
+          description: "Type of maintenance"
+      output_format: "json"
+      confidence_threshold: 0.89
+      
+    utility_performance_tracker:
+      name: "Utility_Performance_Tracker"
+      description: "Monitor utility systems performance"
+      parameters:
+        - name: "system"
+          type: "string"
+          required: false
+          enum: ["HVAC", "Water", "Compressed Air", "All"]
+          description: "Utility system to track"
+        - name: "period"
+          type: "string"
+          required: false
+          default: "7 days"
+          description: "Monitoring period"
+      output_format: "json"
+      confidence_threshold: 0.91
+  
+  # SupplyChain Sub-Agent Tools
+  supplychain_tools:
+    vendor_qualification_extractor:
+      name: "Vendor_Qualification_Extractor"
+      description: "Track vendor qualification status"
+      parameters:
+        - name: "vendor_id"
+          type: "string"
+          required: false
+          description: "Vendor ID"
+        - name: "material"
+          type: "string"
+          required: false
+          description: "Material supplied"
+      output_format: "json"
+      confidence_threshold: 0.92
+      
+    po_grn_tracker:
+      name: "PO_GRN_Tracker"
+      description: "Monitor purchase orders and goods receipts"
+      parameters:
+        - name: "grn_number"
+          type: "string"
+          required: false
+          description: "GRN number"
+        - name: "po_number"
+          type: "string"
+          required: false
+          description: "Purchase order number"
+        - name: "material_code"
+          type: "string"
+          required: false
+          description: "Material code"
+      output_format: "json"
+      confidence_threshold: 0.94
+      
+    material_reconciliation_analyzer:
+      name: "Material_Reconciliation_Analyzer"
+      description: "Reconcile material inventory"
+      parameters:
+        - name: "material_code"
+          type: "string"
+          required: false
+          description: "Material code"
+        - name: "period"
+          type: "string"
+          required: false
+          default: "current month"
+          description: "Reconciliation period"
+      output_format: "json"
+      confidence_threshold: 0.88
+
+# ERP Adapter configurations
+erp_adapters:
+  sap_adapter:
+    type: "SAP"
+    description: "SAP ERP system adapter"
+    connection_string: "${SAP_CONNECTION}"
+    adapter_class: "SAPAdapter"
+    enabled: false
+    
+  oracle_erp_adapter:
+    type: "Oracle"
+    description: "Oracle ERP system adapter"
+    connection_string: "${ORACLE_ERP_CONNECTION}"
+    adapter_class: "OracleERPAdapter"
+    enabled: false
+    
+  csv_file_adapter:
+    type: "CSV"
+    description: "CSV file adapter for flat file imports"
+    base_path: "./data/erp/"
+    adapter_class: "CSVFileAdapter"
+    enabled: true
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_tool_calls: true
+  log_results: true
+  log_performance_metrics: true
+

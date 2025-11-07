@@ -1,0 +1,7 @@
+# APQR Agentic System Dependencies
+# Python 3.8+ required
+
+# Core dependencies
+pyyaml>=6.0.1          # Configuration management
+python-dotenv>=1.0.0   # Environment variable management
+google-adk             # Google ADK framework (required)

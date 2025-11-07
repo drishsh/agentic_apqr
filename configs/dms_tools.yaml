@@ -1,0 +1,220 @@
+# DMS Tools Configuration
+# Defines tools for QA, RA, Management, and HRTraining sub-agents
+
+qa_tools:
+  - name: capa_tracker
+    description: "Tracks Corrective and Preventive Actions with status and closure information"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of CAPA records with metadata"
+    confidence_threshold: 0.85
+    data_sources:
+      - QMS Database
+      - CAPA Management System
+      - Document Repository
+    
+  - name: change_control_parser
+    description: "Parses change control documents and tracks approval status"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of change control records"
+    confidence_threshold: 0.85
+    data_sources:
+      - Change Control System
+      - Document Management System
+    
+  - name: deviation_correlator
+    description: "Analyzes deviations and identifies patterns and correlations"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of deviation records with correlation analysis"
+    confidence_threshold: 0.80
+    data_sources:
+      - Deviation Management System
+      - Quality Event Database
+
+ra_tools:
+  - name: dossier_extractor
+    description: "Extracts information from regulatory dossiers in CTD format"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of dossier sections with metadata"
+    confidence_threshold: 0.90
+    data_sources:
+      - Regulatory Document Repository
+      - eCTD System
+      - Submission Archives
+    
+  - name: regulatory_commitment_tracker
+    description: "Tracks commitments made to health authorities and their status"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of regulatory commitments"
+    confidence_threshold: 0.90
+    data_sources:
+      - Commitment Tracking System
+      - Regulatory Affairs Database
+    
+  - name: submission_history_reader
+    description: "Reads and summarizes regulatory submission history"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of submission records"
+    confidence_threshold: 0.85
+    data_sources:
+      - Submission Management System
+      - Regulatory Gateway
+
+management_tools:
+  - name: audit_summary_analyzer
+    description: "Analyzes audit reports and inspection findings"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of audit summaries with findings"
+    confidence_threshold: 0.90
+    data_sources:
+      - Audit Management System
+      - Inspection Records
+      - CAPA System
+    
+  - name: kpi_dashboard_reader
+    description: "Reads management KPIs and performance metrics"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of KPI metrics"
+    confidence_threshold: 0.95
+    data_sources:
+      - KPI Dashboard
+      - Business Intelligence System
+      - Management Reports
+    
+  - name: signoff_extractor
+    description: "Extracts approval signatures and sign-off chains from documents"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of sign-off records with approval chain"
+    confidence_threshold: 0.95
+    data_sources:
+      - Electronic Signature System
+      - Document Management System
+
+hrtraining_tools:
+  - name: training_matrix_reader
+    description: "Reads training matrices and curriculum requirements"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of training matrix records"
+    confidence_threshold: 0.90
+    data_sources:
+      - Training Management System
+      - HR Database
+      - Curriculum Repository
+    
+  - name: competency_extractor
+    description: "Extracts competency assessments and qualification records"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of competency records"
+    confidence_threshold: 0.90
+    data_sources:
+      - Competency Management System
+      - Performance Database
+    
+  - name: attendance_certification_validator
+    description: "Validates training attendance and certifications"
+    parameters:
+      - query: "User query string"
+      - config: "Configuration dictionary"
+    output_format: "List of attendance and certification records"
+    confidence_threshold: 0.95
+    data_sources:
+      - Learning Management System
+      - Certification Database
+      - Training Records
+
+# DMS Agent Configuration
+dms_config:
+  routing:
+    qa_keywords:
+      - capa
+      - change control
+      - deviation
+      - non-conformance
+      - corrective action
+      - preventive action
+      - quality issue
+    
+    ra_keywords:
+      - regulatory
+      - dossier
+      - submission
+      - commitment
+      - health authority
+      - registration
+      - license
+      - fda
+      - ema
+    
+    management_keywords:
+      - audit
+      - kpi
+      - sign-off
+      - approval
+      - management review
+      - apqr approval
+      - executive summary
+      - dashboard
+    
+    hrtraining_keywords:
+      - training
+      - competency
+      - certification
+      - qualification
+      - attendance
+      - curriculum
+      - training matrix
+      - hr
+  
+  data_adapters:
+    docstore_adapter:
+      type: "DocumentStore"
+      connection: "docstore_connector"
+      index_path: "/data/dms/indices"
+    
+    metadata_adapter:
+      type: "MetadataExtractor"
+      supported_formats:
+        - pdf
+        - docx
+        - txt
+        - json
+    
+    ocr_adapter:
+      type: "OCREngine"
+      engine: "tesseract"
+      languages: ["eng"]
+  
+  output_metadata:
+    required_fields:
+      - source_doc_id
+      - section
+      - confidence
+      - timestamp
+    
+    optional_fields:
+      - page_number
+      - author
+      - version
+      - revision_date
+

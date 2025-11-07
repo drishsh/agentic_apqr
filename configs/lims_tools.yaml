@@ -1,0 +1,213 @@
+# LIMS Tools Configuration
+# Tool names, parameters, and settings for LIMS sub-agents
+# Path: /AGENT/AGENT/apqr-system/configs/lims_tools.yaml
+
+lims_tools:
+  version: "1.0.0"
+  description: "LIMS sub-agent tools configuration"
+  
+  # QC Sub-Agent Tools
+  qc_tools:
+    coa_analyzer:
+      name: "COA_Analyzer"
+      description: "Parse and analyze Certificate of Analysis documents"
+      parameters:
+        - name: "lot_id"
+          type: "string"
+          required: false
+          description: "Lot or batch ID to analyze"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product name filter"
+      output_format: "json"
+      confidence_threshold: 0.8
+      
+    qc_register_extractor:
+      name: "QC_Register_Extractor"
+      description: "Extract data from Quality Control registers"
+      parameters:
+        - name: "period"
+          type: "string"
+          required: false
+          description: "Time period (e.g., Q1 2025)"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product filter"
+        - name: "test_type"
+          type: "string"
+          required: false
+          description: "Test type filter"
+      output_format: "json"
+      confidence_threshold: 0.85
+      
+    oos_trend_evaluator:
+      name: "OOS_Trend_Evaluator"
+      description: "Analyze Out-of-Specification trends"
+      parameters:
+        - name: "time_range"
+          type: "string"
+          required: false
+          default: "12 months"
+          description: "Time range for trend analysis"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product filter"
+        - name: "test_type"
+          type: "string"
+          required: false
+          description: "Test type filter"
+      output_format: "json"
+      confidence_threshold: 0.80
+  
+  # Validation Sub-Agent Tools
+  validation_tools:
+    protocol_mapper:
+      name: "Protocol_Mapper"
+      description: "Map validation protocols to equipment/methods"
+      parameters:
+        - name: "equipment_id"
+          type: "string"
+          required: false
+          description: "Equipment ID"
+        - name: "protocol_type"
+          type: "string"
+          required: false
+          enum: ["IQ", "OQ", "PQ", "Requalification"]
+          description: "Protocol type"
+      output_format: "json"
+      confidence_threshold: 0.90
+      
+    qualification_report_parser:
+      name: "Qualification_Report_Parser"
+      description: "Parse IQ/OQ/PQ qualification reports"
+      parameters:
+        - name: "report_id"
+          type: "string"
+          required: false
+          description: "Report ID"
+        - name: "equipment_id"
+          type: "string"
+          required: false
+          description: "Equipment ID"
+        - name: "qualification_type"
+          type: "string"
+          required: false
+          enum: ["IQ", "OQ", "PQ"]
+          description: "Qualification type"
+      output_format: "json"
+      confidence_threshold: 0.92
+      
+    trend_tracker:
+      name: "Trend_Tracker"
+      description: "Track validation and qualification trends"
+      parameters:
+        - name: "period"
+          type: "string"
+          required: false
+          default: "6 months"
+          description: "Analysis period"
+        - name: "metric"
+          type: "string"
+          required: false
+          enum: ["completion_rate", "duration", "issues"]
+          description: "Metric to track"
+      output_format: "json"
+      confidence_threshold: 0.85
+  
+  # R&D Sub-Agent Tools
+  rnd_tools:
+    experimental_data_summarizer:
+      name: "Experimental_Data_Summarizer"
+      description: "Summarize experimental and research data"
+      parameters:
+        - name: "experiment_id"
+          type: "string"
+          required: false
+          description: "Experiment ID"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product name"
+        - name: "trial_range"
+          type: "string"
+          required: false
+          description: "Trial number range"
+      output_format: "json"
+      confidence_threshold: 0.88
+      
+    stability_data_comparator:
+      name: "Stability_Data_Comparator"
+      description: "Compare stability data across batches and time points"
+      parameters:
+        - name: "product"
+          type: "string"
+          required: true
+          description: "Product name"
+        - name: "storage_condition"
+          type: "string"
+          required: false
+          default: "25°C/60% RH"
+          description: "Storage condition"
+        - name: "timepoints"
+          type: "array"
+          required: false
+          description: "Time points to compare"
+      output_format: "json"
+      confidence_threshold: 0.90
+      
+    product_dev_log_analyzer:
+      name: "Product_Dev_Log_Analyzer"
+      description: "Analyze product development logs and formulation rationale"
+      parameters:
+        - name: "log_id"
+          type: "string"
+          required: false
+          description: "Development log ID"
+        - name: "product"
+          type: "string"
+          required: false
+          description: "Product name"
+        - name: "phase"
+          type: "string"
+          required: false
+          enum: ["Phase 1", "Phase 2", "Phase 3", "Commercial"]
+          description: "Development phase"
+      output_format: "json"
+      confidence_threshold: 0.87
+
+# Data source adapters (pluggable connectors)
+data_adapters:
+  lims_database:
+    type: "database"
+    description: "Main LIMS database connection"
+    connection_string: "${LIMS_DB_CONNECTION}"
+    adapter_class: "LIMSDatabaseAdapter"
+    
+  document_store:
+    type: "filesystem"
+    description: "Document storage for PDFs, Excel files"
+    base_path: "./data/lims/"
+    adapter_class: "FileSystemAdapter"
+    
+  validation_database:
+    type: "database"
+    description: "Validation and qualification database"
+    connection_string: "${VALIDATION_DB_CONNECTION}"
+    adapter_class: "ValidationDatabaseAdapter"
+    
+  rnd_database:
+    type: "database"
+    description: "R&D experimental database"
+    connection_string: "${RND_DB_CONNECTION}"
+    adapter_class: "RnDDatabaseAdapter"
+
+# Logging configuration for LIMS tools
+logging:
+  level: "INFO"
+  log_tool_calls: true
+  log_results: true
+  log_performance_metrics: true
+
