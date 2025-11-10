@@ -1,0 +1,291 @@
+================================================================================
+                    ERP DOMAIN DATABASE INDEX
+================================================================================
+Database Path: APQR_Segregated/ERP/
+Last Updated: 2025-11-10
+Total Batches: 4
+
+================================================================================
+BATCH STRUCTURE OVERVIEW
+================================================================================
+
+ERP/
+├── Batch_1_Jan_Feb/
+│   ├── Engineering/
+│   ├── Manufacturing/
+│   └── SupplyChain/
+├── Batch_2_Feb_Mar/
+│   ├── Manufacturing/
+│   └── SupplyChain/
+├── Batch_3_Mar_Apr/
+│   ├── Manufacturing/
+│   └── SupplyChain/
+└── Batch_4_Apr_May/
+    ├── Manufacturing/
+    └── SupplyChain/
+
+================================================================================
+BATCH 1: January-February (Batch_1_Jan_Feb)
+================================================================================
+
+📁 SUPPLYCHAIN FOLDER: Batch_1_Jan_Feb/SupplyChain/
+────────────────────────────────────────────────────────────────────────────
+
+📂 01. Aspirin_Procurement_Details/ (168 files total)
+   
+   PURCHASE ORDERS (PDF):
+   ├── API - Purchase Order.pdf              → Salicylic Acid (API) PO
+   ├── Binder Purchase Order.pdf             → HPMC (Binder) PO - PO-0789-BND
+   ├── Disintegrant - Purchase Order.pdf     → Disintegrant PO
+   ├── Filler Purchase Order.pdf             → Filler PO
+   └── Lubricant - Purchase Order.pdf        → Lubricant PO
+   
+   REQUISITION SLIPS (140 DOCX files):
+   ├── Req. Slip - API Salicylic - ASP-25-001.docx to 050.docx (50 files)
+   ├── Req. Slip - Binder HPMC - ASP-25-001.docx to 030.docx (30 files)
+   ├── Req. Slip - Disintegrant CSS - ASP-25-001.docx to 020.docx (20 files)
+   ├── Req. Slip - Filler MCC - ASP-25-001.docx to 020.docx (20 files)
+   └── Req. Slip - Lubricant MGS - ASP-25-001.docx to 020.docx (20 files)
+   
+   MATERIAL SPECIFICATIONS (XLSX):
+   ├── Material_Specification_Master1.0.xlsx
+   ├── Material_Specification_Master2.0.xlsx
+   └── Material_Specification_Master3.0.xlsx
+
+📂 08. Packaging_Materials_Procurement/ (28 PDF files)
+   ├── PO_Blister_Foil_Primary_PVDC.pdf
+   ├── PO_Blister_Strips_PVDC.pdf
+   ├── PO_Shipper_Cases_Corrugated.pdf
+   └── Various packaging material purchase orders
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 MANUFACTURING FOLDER: Batch_1_Jan_Feb/Manufacturing/
+────────────────────────────────────────────────────────────────────────────
+
+📂 05. Dispensing Logs/ (43 files: 28 PDF, 15 PNG)
+   └── Material dispensing records for raw materials
+
+📂 06. Sifting, Dry Blending & Lubrication/ (32 files: 30 PDF, 2 PNG)
+   └── Blending and lubrication process records
+
+📂 07. Compression/ (23 PDF files)
+   ├── BMR - Compression Yield Reconciliation.pdf
+   ├── BMR - Line Clearance for Compression.pdf
+   ├── BMR - Machine Setup.pdf
+   ├── BMR - Main Compression Run.pdf
+   ├── Equipment_Usage_Logbook_TCP-01_Page12.pdf
+   ├── Metal Detector Logbook.pdf
+   └── QC Sample Submission Form.pdf
+
+📂 10. Pre Dispensing/ (14 PDF files)
+   └── Pre-dispensing verification records
+
+📂 11. Packaging/ (16 PDF files)
+   └── Packaging process records and line clearance
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 ENGINEERING FOLDER: Batch_1_Jan_Feb/Engineering/
+────────────────────────────────────────────────────────────────────────────
+
+📂 09. Sampling And Quarantine/ (24 files)
+   ├── Environmental Monitoring Log - Sampling Booth (Packaging material).pdf
+   ├── QC Register Packaging Materials.pdf
+   ├── Quarantine Daily Verification Log 2.0.pdf
+   ├── Quarantine Temperature & RH Monitoring Sheet Packaging materials.pdf
+   ├── Sampling and Inspection of Wooden Pallets.pdf
+   ├── Sampling Booth (SB-02) - Daily Cleanliness & Usage Log.pdf
+   └── Various sampling records for packaging materials
+
+================================================================================
+BATCH 2: February-March (Batch_2_Feb_Mar)
+================================================================================
+
+📁 SUPPLYCHAIN FOLDER: Batch_2_Feb_Mar/SupplyChain/
+────────────────────────────────────────────────────────────────────────────
+
+📂 01. Aspirin_Procurement_Details/ (24 files: 15 DOCX, 5 PDF, 4 XLSX)
+   
+   PURCHASE ORDERS (5 PDF):
+   ├── API - Purchase Order.pdf
+   ├── Binder Purchase Order.pdf              → BATCH 2 BINDER PO HERE
+   ├── Disintegrant - Purchase Order.pdf
+   ├── Filler Purchase Order.pdf
+   └── Lubricant - Purchase Order.pdf
+   
+   REQUISITION SLIPS (15 DOCX files):
+   └── Various requisition slips for raw materials
+
+   MATERIAL SPECIFICATIONS (4 XLSX):
+   └── Material specification masters
+
+📂 08. Packaging_Materials_Procurement/ (38 files: 27 DOCX, 11 PDF)
+   └── Packaging material purchase orders and requisitions
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 MANUFACTURING FOLDER: Batch_2_Feb_Mar/Manufacturing/
+────────────────────────────────────────────────────────────────────────────
+
+📂 05. Dispensing_Logs/ (12 files: 9 PDF, 3 DOCX)
+📂 06. Sifting, Dry Blending & Lubrication/ (5 DOCX)
+📂 07. Compression/ (12 files: 10 DOCX, 2 XLSX)
+📂 10. Pre Dispensing/ (14 DOCX)
+📂 11. Packaging/ (21 DOCX)
+
+================================================================================
+BATCH 3: March-April (Batch_3_Mar_Apr)
+================================================================================
+
+📁 SUPPLYCHAIN FOLDER: Batch_3_Mar_Apr/SupplyChain/
+────────────────────────────────────────────────────────────────────────────
+
+📂 01. Aspirin_Procurement_Details/ (24 files: 15 DOCX, 5 PDF, 4 XLSX)
+   
+   PURCHASE ORDERS (5 PDF):
+   ├── API - Purchase Order.pdf
+   ├── Binder Purchase Order.pdf              → BATCH 3 BINDER PO HERE
+   ├── Disintegrant - Purchase Order.pdf
+   ├── Filler Purchase Order.pdf
+   └── Lubricant - Purchase Order.pdf
+   
+   REQUISITION SLIPS (15 DOCX files):
+   └── Various requisition slips for raw materials
+
+   MATERIAL SPECIFICATIONS (4 XLSX):
+   └── Material specification masters
+
+📂 08. Packaging_Materials_Procurement/ (38 files: 27 DOCX, 11 PDF)
+   └── Packaging material purchase orders and requisitions
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 MANUFACTURING FOLDER: Batch_3_Mar_Apr/Manufacturing/
+────────────────────────────────────────────────────────────────────────────
+
+📂 05. Dispensing_Logs/ (12 files: 9 PDF, 3 DOCX)
+📂 06. Sifting, Dry Blending & Lubrication/ (5 DOCX)
+📂 07. Compression/ (12 files: 10 DOCX, 2 XLSX)
+📂 10. Pre Dispensing/ (14 DOCX)
+📂 11. Packaging/ (21 DOCX)
+
+================================================================================
+BATCH 4: April-May (Batch_4_Apr_May)
+================================================================================
+
+📁 SUPPLYCHAIN FOLDER: Batch_4_Apr_May/SupplyChain/
+────────────────────────────────────────────────────────────────────────────
+
+📂 01. Aspirin_Procurement_Details/ (24 files: 15 DOCX, 5 PDF, 4 XLSX)
+   
+   PURCHASE ORDERS (5 PDF):
+   ├── API - Purchase Order.pdf
+   ├── Binder Purchase Order.pdf              → BATCH 4 BINDER PO HERE
+   ├── Disintegrant - Purchase Order.pdf
+   ├── Filler Purchase Order.pdf
+   └── Lubricant - Purchase Order.pdf
+   
+   REQUISITION SLIPS (15 DOCX files):
+   └── Various requisition slips for raw materials
+
+   MATERIAL SPECIFICATIONS (4 XLSX):
+   └── Material specification masters
+
+📂 08. Packaging_Materials_Procurement/ (38 files: 27 DOCX, 11 PDF)
+   └── Packaging material purchase orders and requisitions
+
+────────────────────────────────────────────────────────────────────────────
+
+📁 MANUFACTURING FOLDER: Batch_4_Apr_May/Manufacturing/
+────────────────────────────────────────────────────────────────────────────
+
+📂 05. Dispensing_Logs/ (12 files: 9 PDF, 3 DOCX)
+📂 06. Sifting, Dry Blending & Lubrication/ (5 DOCX)
+📂 07. Compression/ (12 files: 10 DOCX, 2 XLSX)
+📂 10. Pre Dispensing/ (14 DOCX)
+📂 11. Packaging/ (24 files: 16 DOCX, 8 PDF)
+
+================================================================================
+QUERY MAPPING GUIDE FOR SUB-AGENTS
+================================================================================
+
+🔍 SUPPLY CHAIN QUERIES (query_erp_supplychain):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "Purchase Order for [Material]"
+Query Pattern: "PO for [Material] in [Batch/Month]"
+Query Pattern: "[Material] procurement details"
+Query Pattern: "Requisition slip for [Material]"
+
+Material Keywords:
+├── API / Salicylic Acid     → "API - Purchase Order.pdf"
+├── Binder / HPMC            → "Binder Purchase Order.pdf"
+├── Disintegrant / CSS       → "Disintegrant - Purchase Order.pdf"
+├── Filler / MCC             → "Filler Purchase Order.pdf"
+└── Lubricant / MGS          → "Lubricant - Purchase Order.pdf"
+
+**CRITICAL**: For queries requesting "all batches" or "all four batches":
+   MUST search in ALL 4 batch folders:
+   ├── Batch_1_Jan_Feb/SupplyChain/01. Aspirin_Procurement_Details/
+   ├── Batch_2_Feb_Mar/SupplyChain/01. Aspirin_Procurement_Details/
+   ├── Batch_3_Mar_Apr/SupplyChain/01. Aspirin_Procurement_Details/
+   └── Batch_4_Apr_May/SupplyChain/01. Aspirin_Procurement_Details/
+
+Example: "Binder purchase order summary from all four batches"
+   → Parse: Binder Purchase Order.pdf from EACH of the 4 batch folders
+
+────────────────────────────────────────────────────────────────────────────
+
+🔍 MANUFACTURING QUERIES (query_erp_manufacturing):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "Batch Manufacturing Record"
+Query Pattern: "Compression data for [Batch]"
+Query Pattern: "Dispensing logs for [Batch/Material]"
+Query Pattern: "Equipment usage"
+Query Pattern: "Line clearance"
+
+Search Locations by Process Step:
+├── Pre-Dispensing       → 10. Pre Dispensing/
+├── Dispensing           → 05. Dispensing Logs/
+├── Blending/Lubrication → 06. Sifting, Dry Blending & Lubrication/
+├── Compression          → 07. Compression/
+└── Packaging            → 11. Packaging/
+
+────────────────────────────────────────────────────────────────────────────
+
+🔍 ENGINEERING QUERIES (query_erp_engineering):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "Equipment calibration"
+Query Pattern: "Environmental monitoring"
+Query Pattern: "Sampling booth logs"
+Query Pattern: "Quarantine records"
+
+Search Locations:
+└── 09. Sampling And Quarantine/ (Batch 1 only)
+
+================================================================================
+IMPORTANT NOTES FOR AGENTS
+================================================================================
+
+1. **BATCH-SPECIFIC QUERIES**: If query mentions specific batch/month, search 
+   only that batch folder. If no batch specified, search ALL batches.
+
+2. **MATERIAL NAMES**: Multiple names may refer to same material:
+   - API = Salicylic Acid = Active Pharmaceutical Ingredient
+   - Binder = HPMC = Hydroxypropyl methyl cellulose
+   - Disintegrant = CSS = Croscarmellose Sodium
+   - Filler = MCC = Microcrystalline Cellulose
+   - Lubricant = MGS = Magnesium Stearate
+
+3. **FILE FORMATS**: Batch 1 has mostly PDFs, Batches 2-4 have more DOCX/XLSX
+
+4. **COMPREHENSIVE SEARCHES**: For "all batches" queries, MUST aggregate data 
+   from all 4 batch folders, not just the first one found.
+
+================================================================================
+END OF ERP INDEX
+================================================================================
+

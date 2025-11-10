@@ -1,0 +1,336 @@
+================================================================================
+LIMS DATABASE INDEX - APQR_Segregated/LIMS/
+================================================================================
+Last Updated: 2025-11-10
+Purpose: Complete inventory of all LIMS (Laboratory Information Management System) files
+Total Batches: 4 (Batch 1-4)
+
+================================================================================
+BATCH 1 (Jan-Feb) - Batch_(Jan___Feb_Batch_1)/
+================================================================================
+
+--- RAW MATERIAL PROCUREMENT & QC (01. Aspirin_Procurement_Details/) ---
+
+**CERTIFICATES OF ANALYSIS (COA):**
+- COA_API.pdf
+  Content: COA for Salicylic Acid (API), Batch SA20250127, Assay: 98.5-101.0% by HPMC
+  Material: API (Salicylic Acid)
+  Supplier: Sigma-Aldrich
+  Test Results: Appearance, Solubility, Identification, Melting Point, Assay, Heavy Metals, LOD
+
+- COA_Binder.pdf
+  Content: COA for HPMC (Hydroxypropyl methyl cellulose), Batch HPMC20241218
+  Material: Binder
+  Supplier: Sigma-Aldrich
+  Test Results: Appearance, Solubility, Identification (FTIR), Moisture Content, pH, Viscosity, Heavy Metals, Assay
+
+- COA_Diluent.pdf
+  Content: COA for Microcrystalline Cellulose (MCC)
+  Material: Diluent/Filler
+  Supplier: Sigma-Aldrich
+  Test Results: Appearance, Identification, pH, Loss on Drying, Bulk Density, Particle Size
+
+- COA_Disintegrant.pdf
+  Content: COA for Cornstarch
+  Material: Disintegrant
+  Supplier: Sigma-Aldrich
+  Test Results: Appearance, Identification, pH, Moisture Content, Swelling Power
+
+- COA_Lubricant.pdf
+  Content: COA for Magnesium Stearate
+  Material: Lubricant
+  Supplier: Sigma-Aldrich
+  Test Results: Appearance, Identification, Melting Point, Assay, Loss on Drying, Heavy Metals
+
+**SAFETY DATA SHEETS (SDS):**
+- SDS_API.pdf (Salicylic Acid safety information)
+- SDS_Binder.pdf (HPMC safety information)
+- SDS_Diluent.pdf (MCC safety information)
+- SDS_Disintegrant.pdf (Cornstarch safety information)
+- SDS_Lubricant.pdf (Magnesium Stearate safety information)
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API.pdf
+- Shipment Details_Binder.pdf
+- Shipment Details_Diluent.pdf
+- Shipment Details_Disintegrant.pdf
+- Shipment Details_Lubricant.pdf
+
+--- QUARANTINE & GRN LOGS (02. APQR_Quarantine and GRN Logs/) ---
+
+**GOODS RECEIPT NOTES (GRN):**
+- GRN Register Format.pdf
+  Content: Template for Goods Receipt Note
+- GRN.pdf
+  Content: Actual GRN records for incoming materials
+
+**QUARANTINE LOGS:**
+- Quarantine Register Format.pdf
+  Content: Template for quarantine tracking
+- Quarantine Register.pdf
+  Content: Quarantine records for raw materials
+
+--- SAMPLING BOOTH LOGS (03. Sampling Booth Logs/) ---
+
+**SAMPLING BOOTH OPERATIONS:**
+- Sampling Booth (SB-01) - Daily Cleanliness & Usage Log.pdf
+  Content: Daily cleaning and usage records for Sampling Booth SB-01
+- Sampling Booth (SB-02) - Daily Cleanliness & Usage Log.pdf
+  Content: Daily cleaning and usage records for Sampling Booth SB-02
+
+--- INTERNAL QC & COA (04. Internal QC Register & COA/) ---
+
+**IN-PROCESS CONTROL (IPC) CHECKS:**
+- IPC Checks during Film Coating (Extract).pdf
+  Content: In-process control data during coating process
+  Parameters: Tablet weight, thickness, coating weight gain
+
+- IPC Checks During Compression-ASP-25-001.pdf
+  Content: In-process control data during compression
+  Batch: ASP-25-001
+  Parameters: Tablet weight, thickness, hardness, friability
+
+**FINISHED PRODUCT COA:**
+- Certificate of Analysis_Batch_ASP-25-001.pdf
+  Content: Final product COA for Aspirin tablets
+  Batch: ASP-25-001
+  Tests: Description, Identification, Average Weight, Weight Variation, Thickness, Hardness, 
+         Friability, Disintegration Time, Dissolution, Assay, Related Substances, Microbial Limits
+
+**QC REGISTERS:**
+- Internal QC COA Register Format.pdf
+  Content: Template for internal QC COA register
+- Internal QC COA Register.pdf
+  Content: Complete register of all internal QC tests performed
+
+--- DISPENSING LOGS (05. Dispensing Logs/) ---
+
+**MATERIAL DISPENSING RECORDS:**
+- Salicylic Acid.pdf (API dispensing log)
+- HPMC.pdf (Binder dispensing log)
+- MCC.pdf (Diluent dispensing log)
+- Cornstarch.pdf (Disintegrant dispensing log)
+- Magnesium Stearate.pdf (Lubricant dispensing log)
+
+**WEIGHING BALANCE RECORDS:**
+- Weighing_Balance_Record_DISP-ASP25001-01-1.pdf to 01-4.pdf
+- Weighing_Balance_Record_DISP-ASP25001-02.pdf to 05.pdf
+  Content: Balance performance and weighing records
+
+**PARTIAL WEIGHING RECORDS:**
+- Partial_Weighing_Record_PC-ASP25001-01.pdf to 05.pdf
+  Content: Records for materials dispensed in multiple portions
+
+--- COMPRESSION QC (07. Compression/) ---
+
+**IPC COMPRESSION CHECKS:**
+- IPC Checks During Compression-ASP-25-001.pdf
+  Content: Compression in-process checks
+  Batch: ASP-25-001
+  Parameters: Weight, thickness, hardness at various time points
+
+--- PACKAGING MATERIALS QC (08. Packaging_Materials_Procurement/) ---
+
+**PACKAGING MATERIAL COAs:**
+- COA_Packaging_Blister_Foil.pdf
+  Content: COA for blister foil
+- COA_Packaging_Cartons.pdf
+  Content: COA for cartons
+- COA_Packaging_PVC_Film.pdf
+  Content: COA for PVC film
+
+**PACKAGING MATERIAL SDS:**
+- SDS_Packaging_Blister_Foil.pdf
+- SDS_Packaging_PVC_Film.pdf
+
+--- QUARANTINE & SAMPLING (09. Sampling And Quarantine/) ---
+
+**QUARANTINE MONITORING:**
+- Quarantine Daily Verification Log 2.0.pdf
+  Content: Daily quarantine area verification
+- Quarantine Temperature & RH Monitoring Sheet Packaging materials.pdf
+  Content: Environmental monitoring for quarantined packaging materials
+
+**SAMPLING RECORDS:**
+- QC Register Packaging Materials.pdf
+  Content: QC sampling register for packaging materials
+- Sampling of Corrugated Shipper Cases.pdf
+- Sampling of Primary and Secondary Packaging Materials.pdf
+- Sampling of Rolled Packaging Materials.pdf
+- Sampling and Inspection of Wooden Pallets.pdf
+
+--- APQR DOCUMENTS (APQR Documents (Jan - Feb Batch 1)/) ---
+
+**ANNUAL PRODUCT QUALITY REVIEW:**
+- APQR_Template_Batch_1.pdf
+  Content: APQR document template for Batch 1
+- APQR_Summary_Batch_1.pdf
+  Content: Summary of APQR for Batch 1
+
+================================================================================
+BATCH 2 (Feb-Mar) - Batch_February_March_Batch_2/
+================================================================================
+
+--- RAW MATERIAL PROCUREMENT & QC (01. Aspirin_Procurement_Details/) ---
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-002.docx
+  Content: COA for API for Batch 2
+  Batch: ASP-25-002
+
+- COA_Binder_ASP-25-002.docx
+  Content: COA for Binder (HPMC) for Batch 2
+  Batch: ASP-25-002
+
+- COA_Diluent_ASP-25-002.docx
+  Content: COA for Diluent (MCC) for Batch 2
+  Batch: ASP-25-002
+
+- COA_Disintegrant_ASP-25-002.docx
+  Content: COA for Disintegrant for Batch 2
+  Batch: ASP-25-002
+
+- COA_Lubricant_ASP-25-002.docx
+  Content: COA for Lubricant for Batch 2
+  Batch: ASP-25-002
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-002.docx
+- Shipment Details_Binder_Batch_ASP-25-002.docx
+- Shipment Details_Diluent_Batch_ASP-25-002.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-002.docx
+- Shipment Details_Lubricant_Batch_ASP-25-002.docx
+
+--- OTHER FOLDERS ---
+Similar structure to Batch 1:
+- 02. APQR_Quarantine and GRN Logs/
+- 03. Sampling Booth Logs/
+- 04. Internal QC Register & COA/
+- 08. Packaging_Materials_Procurement/
+- 09. Sampling And Quarantine/
+- APQR Documents February-March Batch 2/
+
+================================================================================
+BATCH 3 (Mar-Apr) - Batch_March_April_Batch_3/
+================================================================================
+
+--- RAW MATERIAL PROCUREMENT & QC (01. Aspirin_Procurement_Details/) ---
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-003.docx
+- COA_Binder_ASP-25-003.docx
+- COA_Diluent_ASP-25-003.docx
+- COA_Disintegrant_ASP-25-003.docx
+- COA_Lubricant_ASP-25-003.docx
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-003.docx
+- Shipment Details_Binder_Batch_ASP-25-003.docx
+- Shipment Details_Diluent_Batch_ASP-25-003.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-003.docx
+- Shipment Details_Lubricant_Batch_ASP-25-003.docx
+
+--- OTHER FOLDERS ---
+Similar structure to Batch 1 & 2
+
+================================================================================
+BATCH 4 (Apr-May) - Batch_April_May_Batch_4/
+================================================================================
+
+--- RAW MATERIAL PROCUREMENT & QC (01. Aspirin_Procurement_Details/) ---
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-004.docx
+- COA_Binder_ASP-25-004.docx
+- COA_Diluent_ASP-25-004.docx
+- COA_Disintegrant_ASP-25-004.docx
+- COA_Lubricant_ASP-25-004.docx
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-004.docx
+- Shipment Details_Binder_Batch_ASP-25-004.docx
+- Shipment Details_Diluent_Batch_ASP-25-004.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-004.docx
+- Shipment Details_Lubricant_Batch_ASP-25-004.docx
+
+--- OTHER FOLDERS ---
+Similar structure to previous batches
+
+================================================================================
+SEARCH TIPS FOR AGENTS:
+================================================================================
+
+**FINDING COAs FOR RAW MATERIALS:**
+- Batch 1: "COA_[Material].pdf" in folder 01. Aspirin_Procurement_Details/
+- Batch 2-4: "COA_[Material]_ASP-25-00X.docx" in folder 01. Aspirin_Procurement_Details/
+- Materials: API, Binder, Diluent, Disintegrant, Lubricant
+
+**FINDING FINISHED PRODUCT COAs:**
+- Look in "04. Internal QC Register & COA/" folder
+- File: "Certificate of Analysis_Batch_ASP-25-00X.pdf"
+
+**FINDING IPC (IN-PROCESS CONTROL) DATA:**
+- Compression IPC: Look in "07. Compression/" or "04. Internal QC Register & COA/"
+- Coating IPC: Look in "04. Internal QC Register & COA/"
+- File pattern: "IPC Checks During [Process]-ASP-25-00X.pdf"
+
+**FINDING SAMPLING RECORDS:**
+- Folder: "03. Sampling Booth Logs/"
+- Files: "Sampling Booth (SB-01)" or "Sampling Booth (SB-02)"
+
+**FINDING QUARANTINE LOGS:**
+- Folder: "02. APQR_Quarantine and GRN Logs/" or "09. Sampling And Quarantine/"
+- Files: "Quarantine Register.pdf", "Quarantine Daily Verification Log"
+
+**FINDING PACKAGING MATERIAL QC:**
+- Folder: "08. Packaging_Materials_Procurement/"
+- Files: "COA_Packaging_[Material].pdf"
+
+**MATERIAL MAPPING:**
+- API = Salicylic Acid (Active Pharmaceutical Ingredient)
+- Binder = HPMC (Hydroxypropyl methyl cellulose)
+- Diluent = MCC (Microcrystalline Cellulose)
+- Disintegrant = Cornstarch
+- Lubricant = Magnesium Stearate
+
+**BATCH IDENTIFICATION:**
+- Batch 1 = ASP-25-001 (Jan-Feb)
+- Batch 2 = ASP-25-002 (Feb-Mar)
+- Batch 3 = ASP-25-003 (Mar-Apr)
+- Batch 4 = ASP-25-004 (Apr-May)
+
+**TEST PARAMETERS IN COAs:**
+- Appearance: Visual description
+- Identification: FTIR, Chemical tests
+- Assay: Active content percentage
+- Impurities/Related Substances: Purity testing
+- Physical Tests: Weight, Thickness, Hardness, Friability, Disintegration, Dissolution
+- Moisture Content/LOD: Loss on Drying
+- Heavy Metals: Contamination testing
+- Microbial Limits: Bioburden testing
+
+================================================================================
+END OF LIMS INDEX
+================================================================================
+

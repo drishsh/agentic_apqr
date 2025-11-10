@@ -1,0 +1,395 @@
+================================================================================
+ERP DATABASE INDEX - APQR_Segregated/ERP/
+================================================================================
+Last Updated: 2025-11-10
+Purpose: Complete inventory of all ERP files organized by batch and category
+Total Batches: 4 (Batch_1_Jan_Feb, Batch_2_Feb_Mar, Batch_3_Mar_Apr, Batch_4_Apr_May)
+
+================================================================================
+BATCH 1 (Jan-Feb) - Batch_1_Jan_Feb/
+================================================================================
+
+--- SUPPLY CHAIN (SupplyChain/) ---
+
+Location: Batch_1_Jan_Feb/SupplyChain/01. Aspirin_Procurement_Details/
+
+**PURCHASE ORDERS (PO):**
+- Binder - Purchase Order.pdf
+  Content: PO for HPMC (Hydroxypropyl methyl cellulose), PO-0789-BND, Supplier: Sigma-Aldrich, Qty: 5 Kg, Cost: ₹30,680
+  Material: Binder/HPMC
+  Date: 20-Jan-2025
+
+- Lubricant - Purchase Order.pdf
+  Content: PO for Magnesium Stearate, PO-0790-LUB, Supplier: Sigma-Aldrich
+  Material: Lubricant
+  Date: 20-Jan-2025
+
+- API - Purchase Order.pdf
+  Content: PO for Salicylic Acid (API), PO-2401-API, Supplier: Sigma-Aldrich
+  Material: API
+  Date: 20-Jan-2025
+
+- Diluent - Purchase Order.pdf
+  Content: PO for Microcrystalline Cellulose (MCC), Supplier: Sigma-Aldrich
+  Material: Diluent/Filler
+  Date: 20-Jan-2025
+
+- Disintegrant - Purchase Order.pdf
+  Content: PO for Cornstarch, Supplier: Sigma-Aldrich
+  Material: Disintegrant
+  Date: 20-Jan-2025
+
+**REQUISITION SLIPS:**
+- Req. Slip - Binder - ASP-25-001.docx to ASP-25-010.docx (10 files)
+  Content: Material requisition slips for Binder/HPMC for various batches
+  Material: Binder/HPMC
+
+- Req. Slip - API - ASP-25-001.docx to ASP-25-010.docx (10 files)
+  Content: Material requisition slips for API (Salicylic Acid)
+  Material: API
+
+- Req. Slip - Diluent - ASP-25-001.docx to ASP-25-010.docx (10 files)
+  Content: Material requisition slips for Diluent (MCC)
+  Material: Diluent
+
+- Req. Slip - Disintegrant - ASP-25-001.docx to ASP-25-010.docx (10 files)
+  Content: Material requisition slips for Disintegrant (Cornstarch)
+  Material: Disintegrant
+
+- Req. Slip - Lubricant - ASP-25-001.docx to ASP-25-010.docx (10 files)
+  Content: Material requisition slips for Lubricant (Magnesium Stearate)
+  Material: Lubricant
+
+**CERTIFICATES OF ANALYSIS (COA):**
+- COA_API.pdf
+  Content: COA for Salicylic Acid, Batch: SA20250127, Assay: 98.5-101.0%
+  Material: API
+  
+- COA_Binder.pdf
+  Content: COA for HPMC, Batch: HPMC20241218
+  Material: Binder
+  
+- COA_Diluent.pdf
+  Content: COA for MCC
+  Material: Diluent
+  
+- COA_Disintegrant.pdf
+  Content: COA for Cornstarch
+  Material: Disintegrant
+  
+- COA_Lubricant.pdf
+  Content: COA for Magnesium Stearate
+  Material: Lubricant
+
+**SAFETY DATA SHEETS (SDS):**
+- SDS_API.pdf (Salicylic Acid)
+- SDS_Binder.pdf (HPMC)
+- SDS_Diluent.pdf (MCC)
+- SDS_Disintegrant.pdf (Cornstarch)
+- SDS_Lubricant.pdf (Magnesium Stearate)
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API.pdf
+- Shipment Details_Binder.pdf
+- Shipment Details_Diluent.pdf
+- Shipment Details_Disintegrant.pdf
+- Shipment Details_Lubricant.pdf
+
+--- MANUFACTURING (Manufacturing/) ---
+
+Location: Batch_1_Jan_Feb/Manufacturing/05. Dispensing Logs/
+
+**BATCH MANUFACTURING RECORDS (BMR):**
+- Batch Manufacturing Record (BMR).pdf
+  Content: Complete BMR for Batch ASP-25-001
+  Batch: ASP-25-001
+
+**MATERIAL DISPENSING LOGS:**
+- Salicylic Acid.pdf (API dispensing)
+- HPMC.pdf (Binder dispensing)
+- MCC.pdf (Diluent dispensing)
+- Cornstarch.pdf (Disintegrant dispensing)
+- Magnesium Stearate.pdf (Lubricant dispensing)
+
+**WEIGHING RECORDS:**
+- Weighing_Balance_Record_DISP-ASP25001-01-1.pdf to 01-4.pdf
+- Weighing_Balance_Record_DISP-ASP25001-02.pdf to 05.pdf
+- Partial_Weighing_Record_PC-ASP25001-01.pdf to 05.pdf
+
+**BALANCE VERIFICATION:**
+- 1. Balance Performance Verification Log.pdf
+- 2. Balance Performance Verification Log.pdf
+- 3. Balance Performance Verification Log.pdf
+
+**AREA CLEANING LOGS:**
+- Area & Equipment Cleaning Log Register DB01.pdf
+- Area & Equipment Cleaning Log Register DB02.pdf
+- Area & Equipment Cleaning Log Register DB03.pdf
+
+**DISPENSING BOOTH VERIFICATION:**
+- Daily Verification Log Register_ Dispensing Booth DB-01.pdf
+- Daily Verification Log Register_ Dispensing Booth DB-02.pdf
+- Daily Verification Log Register_ Dispensing Booth DB-03.pdf
+
+**MATERIAL RECONCILIATION:**
+- Material Reconciliation Log (Section of the BMR).pdf
+
+Location: Batch_1_Jan_Feb/Manufacturing/06. Sifting, Dry Blending & Lubrication/
+
+**ASSAY RESULTS (Blend Uniformity):**
+- Assay_Result_Sample_01_Top_Left.pdf
+- Assay_Result_Sample_02_Top_Center.pdf
+- Assay_Result_Sample_03_Top_Right.pdf
+- Assay_Result_Sample_04_Middle_Front.pdf
+- Assay_Result_Sample_05_Middle_Center.pdf
+- Assay_Result_Sample_06_Middle_Rear.pdf
+- Assay_Result_Sample_07_Bottom_Left.pdf
+- Assay_Result_Sample_08_Bottom_Center.pdf
+- Assay_Result_Sample_09_Bottom_Right.pdf
+
+**BLENDING EQUIPMENT LOGS:**
+- Blender Cleaning & Usage Log (BL-03).pdf
+- Blender Cleaning & Usage Log.pdf
+- Dry Granulator Cleaning & Usage Log.pdf
+- Dry Granulator Cleaning and usage Log Register.pdf
+- Environmental Monitoring Log - Blending Room.pdf
+
+**SIFTING LOGS:**
+- Co-Mill Cleaning & Usage Log.pdf
+- Sifter Cleaning & Usage Log.pdf
+- Sifter Cleaning & usage Log Register.pdf
+
+Location: Batch_1_Jan_Feb/Manufacturing/07. Compression/
+
+**COMPRESSION RECORDS:**
+- Compression Area HVAC Monitoring Sheet.pdf
+- Compression Area_Environmental Monitoring Report- Viable.pdf
+- Compression Machine Cleaning and Usage Log Register.pdf
+- Compression Tool Cleaning & Usage Log.pdf
+- Environmental Monitoring Log - Compression Room (Non-viable).pdf
+- Force Feeder Cleaning & Usage Log.pdf
+- IPC Checks During Compression-ASP-25-001.pdf
+- Tablet Press Punch Set Verification Log.pdf
+- Tablet Press Set-Up Verification Log.pdf
+
+Location: Batch_1_Jan_Feb/Manufacturing/08. Coating/
+
+**COATING RECORDS:**
+- Coating Area HVAC Monitoring Sheet.pdf
+- Coating Machine Cleaning & Usage Log Register.pdf
+- Coating Pan Cleaning & Usage Log.pdf
+- Coating Process Parameter Log.pdf
+- Environmental Monitoring Log - Coating Room (Non-viable).pdf
+- IPC Checks during Film Coating (Extract).pdf
+
+--- ENGINEERING (Engineering/) ---
+
+Location: Batch_1_Jan_Feb/Engineering/09. Sampling And Quarantine/
+
+**QUARANTINE & SAMPLING:**
+- Quarantine Daily Verification Log 2.0.pdf
+- Quarantine Temperature & RH Monitoring Sheet Packaging materials.pdf
+- QC Register Packaging Materials.pdf
+- Environmental Monitoring Log - Sampling Booth (Packaging material).pdf
+
+**SAMPLING BOOTH LOGS:**
+- Sampling Booth (SB-02) - Daily Cleanliness & Usage Log.pdf
+- Sampling of Corrugated Shipper Cases.pdf
+- Sampling of Primary and Secondary Packaging Materials.pdf
+- Sampling of Rolled Packaging Materials.pdf
+- Sampling and Inspection of Wooden Pallets.pdf
+
+**HVAC MONITORING:**
+- 2025-01-24_08-00.pdf to 2025-01-26_20-00.pdf (Multiple HVAC logs)
+
+================================================================================
+BATCH 2 (Feb-Mar) - Batch_2_Feb_Mar/
+================================================================================
+
+--- SUPPLY CHAIN (SupplyChain/) ---
+
+Location: Batch_2_Feb_Mar/SupplyChain/01. Aspirin_Procurement_Details/
+
+**PURCHASE ORDERS:**
+- API - ASP-25-002.docx
+  Content: PO for API (Salicylic Acid) for Batch 2
+  Material: API
+  Batch: ASP-25-002
+
+- Binder - ASP-25-002.docx
+  Content: PO for Binder (HPMC) for Batch 2
+  Material: Binder/HPMC
+  Batch: ASP-25-002
+
+- Diluent - ASP-25-002.docx
+  Content: PO for Diluent (MCC) for Batch 2
+  Material: Diluent
+  Batch: ASP-25-002
+
+- Disintegrant - ASP-25-002.docx
+  Content: PO for Disintegrant (Cornstarch) for Batch 2
+  Material: Disintegrant
+  Batch: ASP-25-002
+
+- Lubricant - ASP-25-002.docx
+  Content: PO for Lubricant (Magnesium Stearate) for Batch 2
+  Material: Lubricant
+  Batch: ASP-25-002
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-002.docx
+- COA_Binder_ASP-25-002.docx
+- COA_Diluent_ASP-25-002.docx
+- COA_Disintegrant_ASP-25-002.docx
+- COA_Lubricant_ASP-25-002.docx
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-002.docx
+- Shipment Details_Binder_Batch_ASP-25-002.docx
+- Shipment Details_Diluent_Batch_ASP-25-002.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-002.docx
+- Shipment Details_Lubricant_Batch_ASP-25-002.docx
+
+================================================================================
+BATCH 3 (Mar-Apr) - Batch_3_Mar_Apr/
+================================================================================
+
+--- SUPPLY CHAIN (SupplyChain/) ---
+
+Location: Batch_3_Mar_Apr/SupplyChain/01. Aspirin_Procurement_Details/
+
+**PURCHASE ORDERS:**
+- API - ASP-25-003.docx
+  Content: PO for API for Batch 3
+  Batch: ASP-25-003
+
+- Binder - ASP-25-003.docx
+  Content: PO for Binder (HPMC) for Batch 3
+  Material: Binder/HPMC
+  Batch: ASP-25-003
+
+- Diluent - ASP-25-003.docx
+  Content: PO for Diluent for Batch 3
+  Batch: ASP-25-003
+
+- Disintegrant - ASP-25-003.docx
+  Content: PO for Disintegrant for Batch 3
+  Batch: ASP-25-003
+
+- Lubricant - ASP-25-003.docx
+  Content: PO for Lubricant for Batch 3
+  Batch: ASP-25-003
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-003.docx
+- COA_Binder_ASP-25-003.docx
+- COA_Diluent_ASP-25-003.docx
+- COA_Disintegrant_ASP-25-003.docx
+- COA_Lubricant_ASP-25-003.docx
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-003.docx
+- Shipment Details_Binder_Batch_ASP-25-003.docx
+- Shipment Details_Diluent_Batch_ASP-25-003.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-003.docx
+- Shipment Details_Lubricant_Batch_ASP-25-003.docx
+
+================================================================================
+BATCH 4 (Apr-May) - Batch_4_Apr_May/
+================================================================================
+
+--- SUPPLY CHAIN (SupplyChain/) ---
+
+Location: Batch_4_Apr_May/SupplyChain/01. Aspirin_Procurement_Details/
+
+**PURCHASE ORDERS:**
+- API - ASP-25-004.docx
+  Content: PO for API for Batch 4
+  Batch: ASP-25-004
+
+- Binder - ASP-25-004.docx
+  Content: PO for Binder (HPMC) for Batch 4
+  Material: Binder/HPMC
+  Batch: ASP-25-004
+
+- Diluent - ASP-25-004.docx
+  Content: PO for Diluent for Batch 4
+  Batch: ASP-25-004
+
+- Disintegrant - ASP-25-004.docx
+  Content: PO for Disintegrant for Batch 4
+  Batch: ASP-25-004
+
+- Lubricant - ASP-25-004.docx
+  Content: PO for Lubricant for Batch 4
+  Batch: ASP-25-004
+
+**CERTIFICATES OF ANALYSIS:**
+- COA_API_ASP-25-004.docx
+- COA_Binder_ASP-25-004.docx
+- COA_Diluent_ASP-25-004.docx
+- COA_Disintegrant_ASP-25-004.docx
+- COA_Lubricant_ASP-25-004.docx
+
+**SAFETY DATA SHEETS:**
+- SDS_API.pdf
+- SDS_Binder.pdf
+- SDS_Diluent.pdf
+- SDS_Disintegrant.pdf
+- SDS_Lubricant.pdf
+
+**SHIPMENT DETAILS:**
+- Shipment Details_API_Batch_ASP-25-004.docx
+- Shipment Details_Binder_Batch_ASP-25-004.docx
+- Shipment Details_Diluent_Batch_ASP-25-004.docx
+- Shipment Details_Disintegrant_Batch_ASP-25-004.docx
+- Shipment Details_Lubricant_Batch_ASP-25-004.docx
+
+================================================================================
+SEARCH TIPS FOR AGENTS:
+================================================================================
+
+**FINDING PURCHASE ORDERS:**
+- Batch 1: Look for "*Purchase Order.pdf" files
+- Batch 2-4: Look for "[Material] - ASP-25-00X.docx" files (e.g., "Binder - ASP-25-002.docx")
+- Materials: API, Binder, Diluent, Disintegrant, Lubricant
+
+**FINDING COAs:**
+- Batch 1: "COA_[Material].pdf"
+- Batch 2-4: "COA_[Material]_ASP-25-00X.docx"
+
+**FINDING REQUISITION SLIPS:**
+- Batch 1: "Req. Slip - [Material] - ASP-25-001.docx" to ASP-25-010.docx
+- Batch 2-4: Not available in current structure
+
+**MATERIAL MAPPING:**
+- API = Salicylic Acid (Active Pharmaceutical Ingredient)
+- Binder = HPMC (Hydroxypropyl methyl cellulose)
+- Diluent = MCC (Microcrystalline Cellulose)
+- Disintegrant = Cornstarch
+- Lubricant = Magnesium Stearate
+
+**BATCH IDENTIFICATION:**
+- Batch 1 = ASP-25-001 (Jan-Feb)
+- Batch 2 = ASP-25-002 (Feb-Mar)
+- Batch 3 = ASP-25-003 (Mar-Apr)
+- Batch 4 = ASP-25-004 (Apr-May)
+
+================================================================================
+END OF ERP INDEX
+================================================================================
+

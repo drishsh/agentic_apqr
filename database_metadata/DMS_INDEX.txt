@@ -1,0 +1,369 @@
+================================================================================
+DMS DATABASE INDEX - APQR_Segregated/DMS/
+================================================================================
+Last Updated: 2025-11-10
+Purpose: Complete inventory of all DMS (Document Management System) files
+Includes: SOPs, Training Records, CAPA Documents, Regulatory Documents
+
+================================================================================
+STANDARD OPERATING PROCEDURES (13. List of all the SOPs/)
+================================================================================
+
+--- VERSION 1 (Version-1/) ---
+
+**MANUFACTURING SOPs:**
+- SOP-MFG-001_Dispensing of Raw Materials.pdf
+  Content: Procedure for accurate weighing and dispensing of raw materials
+  Department: Manufacturing
+  Version: 1.0
+
+- SOP-MFG-002_Dry Granulation Process.pdf
+  Content: Procedure for dry granulation using roller compactor
+  Department: Manufacturing
+  Version: 1.0
+
+- SOP-MFG-003_Tablet Compression.pdf
+  Content: Procedure for tablet compression operations
+  Department: Manufacturing
+  Version: 1.0
+
+- SOP-MFG-004_Film Coating.pdf
+  Content: Procedure for film coating of tablets
+  Department: Manufacturing
+  Version: 1.0
+
+- SOP-MFG-005_Blending Operations.pdf
+  Content: Procedure for powder blending operations
+  Department: Manufacturing
+  Version: 1.0
+
+**QUALITY CONTROL SOPs:**
+- SOP-QC-001_Sampling of Raw Materials.pdf
+  Content: Procedure for sampling incoming raw materials
+  Department: QC/LIMS
+  Version: 1.0
+
+- SOP-QC-002_Analytical Method Validation.pdf
+  Content: Procedure for validation of analytical methods
+  Department: QC/LIMS
+  Version: 1.0
+
+- SOP-QC-003_Stability Testing.pdf
+  Content: Procedure for stability testing of finished products
+  Department: QC/LIMS
+  Version: 1.0
+
+- SOP-QC-004_Out of Specification (OOS) Investigation.pdf
+  Content: Procedure for investigating out-of-specification results
+  Department: QC/LIMS
+  Version: 1.0
+
+- SOP-QC-005_Certificate of Analysis Preparation.pdf
+  Content: Procedure for preparing and reviewing COAs
+  Department: QC/LIMS
+  Version: 1.0
+
+**QUALITY ASSURANCE SOPs:**
+- SOP-QA-001_Deviation Management.pdf
+  Content: Procedure for managing and investigating deviations
+  Department: QA
+  Version: 1.0
+
+- SOP-QA-002_Change Control.pdf
+  Content: Procedure for change control process
+  Department: QA
+  Version: 1.0
+
+- SOP-QA-003_CAPA Management.pdf
+  Content: Procedure for Corrective and Preventive Action
+  Department: QA
+  Version: 1.0
+
+- SOP-QA-004_Internal Audit.pdf
+  Content: Procedure for conducting internal GMP audits
+  Department: QA
+  Version: 1.0
+
+- SOP-QA-005_Document Control.pdf
+  Content: Procedure for document management and control
+  Department: QA
+  Version: 1.0
+
+- SOP-QA-006_Annual Product Quality Review.pdf
+  Content: Procedure for preparing APQR
+  Department: QA
+  Version: 1.0
+
+**ENGINEERING SOPs:**
+- SOP-ENG-001_Equipment Calibration.pdf
+  Content: Procedure for calibration of manufacturing equipment
+  Department: Engineering
+  Version: 1.0
+
+- SOP-ENG-002_Preventive Maintenance.pdf
+  Content: Procedure for preventive maintenance of equipment
+  Department: Engineering
+  Version: 1.0
+
+- SOP-ENG-003_HVAC System Monitoring.pdf
+  Content: Procedure for monitoring HVAC systems
+  Department: Engineering
+  Version: 1.0
+
+- SOP-ENG-004_Environmental Monitoring.pdf
+  Content: Procedure for environmental monitoring (viable/non-viable)
+  Department: Engineering
+  Version: 1.0
+
+**WAREHOUSE & SUPPLY CHAIN SOPs:**
+- SOP-WH-001_Receipt and Storage of Materials.pdf
+  Content: Procedure for receiving and storing materials
+  Department: Warehouse
+  Version: 1.0
+
+- SOP-WH-002_Quarantine Management.pdf
+  Content: Procedure for quarantine area management
+  Department: Warehouse
+  Version: 1.0
+
+- SOP-WH-003_Material Dispensing to Production.pdf
+  Content: Procedure for issuing materials to production
+  Department: Warehouse
+  Version: 1.0
+
+**TRAINING & HR SOPs:**
+- SOP-HR-001_Personnel Training.pdf
+  Content: Procedure for training new and existing personnel
+  Department: HR/Training
+  Version: 1.0
+
+- SOP-HR-002_Training Effectiveness Assessment.pdf
+  Content: Procedure for assessing training effectiveness
+  Department: HR/Training
+  Version: 1.0
+
+--- VERSION 2 (Version-2/) ---
+
+**UPDATED SOPs (Version 2.0):**
+- SOP-MFG-001_Dispensing of Raw Materials_v2.pdf
+  Content: Updated procedure for raw material dispensing
+  Changes: Added electronic balance qualification requirements
+  Department: Manufacturing
+  Version: 2.0
+  Effective Date: Updated version
+
+- SOP-QC-004_Out of Specification (OOS) Investigation_v2.pdf
+  Content: Updated OOS investigation procedure
+  Changes: Added risk assessment step
+  Department: QC/LIMS
+  Version: 2.0
+
+- SOP-QA-003_CAPA Management_v2.pdf
+  Content: Updated CAPA management procedure
+  Changes: Revised timelines and escalation process
+  Department: QA
+  Version: 2.0
+
+- SOP-QA-006_Annual Product Quality Review_v2.pdf
+  Content: Updated APQR procedure
+  Changes: Added data trending analysis requirements
+  Department: QA
+  Version: 2.0
+
+================================================================================
+TRAINING RECORDS (14. Comprehensive_training_records/)
+================================================================================
+
+--- TRAINING MATRICES (training_matrices/) ---
+
+**DEPARTMENT-WISE TRAINING MATRICES:**
+- Manufacturing_Training_Matrix_2025.xlsx
+  Content: Complete training matrix for manufacturing personnel
+  Includes: Employee names, SOP numbers, training dates, trainer names, assessment results
+  Departments: Dispensing, Granulation, Compression, Coating
+  Year: 2025
+
+- QC_Training_Matrix_2025.xlsx
+  Content: Training matrix for QC/LIMS personnel
+  Includes: Analytical methods training, instrument training, GMP training
+  Departments: QC Testing, Microbiology, Stability
+  Year: 2025
+
+- QA_Training_Matrix_2025.xlsx
+  Content: Training matrix for QA personnel
+  Includes: GMP training, audit training, regulatory training
+  Department: Quality Assurance
+  Year: 2025
+
+- Engineering_Training_Matrix_2025.xlsx
+  Content: Training matrix for engineering personnel
+  Includes: Equipment operation, calibration, maintenance training
+  Department: Engineering/Maintenance
+  Year: 2025
+
+- Warehouse_Training_Matrix_2025.xlsx
+  Content: Training matrix for warehouse personnel
+  Includes: Material handling, storage, FIFO training
+  Department: Warehouse/Supply Chain
+  Year: 2025
+
+**TRAINING ATTENDANCE RECORDS:**
+- GMP_Training_Attendance_Jan_2025.pdf
+  Content: Attendance sheet for GMP refresher training
+  Date: January 2025
+  Attendees: All production and QC staff
+
+- SOP_Training_Attendance_Feb_2025.pdf
+  Content: Attendance for new SOP training
+  Date: February 2025
+  SOPs Covered: Updated manufacturing SOPs
+
+**TRAINING EFFECTIVENESS ASSESSMENTS:**
+- Training_Assessment_Manufacturing_Q1_2025.pdf
+  Content: Quarterly training effectiveness assessment for manufacturing
+  Quarter: Q1 2025
+  Assessment Method: Written test + practical demonstration
+
+- Training_Assessment_QC_Q1_2025.pdf
+  Content: Quarterly training effectiveness assessment for QC
+  Quarter: Q1 2025
+  Assessment Method: Written test + instrument proficiency check
+
+**INDIVIDUAL TRAINING RECORDS:**
+- Employee_Training_Record_Format.pdf
+  Content: Template for individual employee training record
+  
+- Training_Certificates/
+  Content: Individual training certificates for employees
+
+================================================================================
+CAPA DOCUMENTS (CAPA Documents/)
+================================================================================
+
+**CORRECTIVE AND PREVENTIVE ACTION RECORDS:**
+- CAPA_001_OOS_Investigation_Batch_ASP-25-001.pdf
+  Content: CAPA for OOS result in Batch 1
+  Batch: ASP-25-001
+  Issue: Out-of-specification hardness result
+  Root Cause: Compression force variation
+  Corrective Action: Adjusted compression parameters
+  Preventive Action: Enhanced IPC frequency
+  Status: Closed
+
+- CAPA_002_Equipment_Breakdown_Tablet_Press.pdf
+  Content: CAPA for tablet press breakdown
+  Equipment: Tablet Press TP-03
+  Issue: Motor failure during compression
+  Root Cause: Lack of preventive maintenance
+  Corrective Action: Motor replacement
+  Preventive Action: Updated PM schedule
+  Status: Closed
+
+- CAPA_003_Environmental_Excursion_Coating_Room.pdf
+  Content: CAPA for environmental monitoring excursion
+  Area: Coating Room
+  Issue: Temperature exceeded limit
+  Root Cause: HVAC malfunction
+  Corrective Action: HVAC repair
+  Preventive Action: Enhanced HVAC monitoring
+  Status: Closed
+
+- CAPA_004_Blend_Uniformity_Failure_Batch_ASP-25-004.pdf
+  Content: CAPA for blend uniformity failure in Batch 4
+  Batch: ASP-25-004
+  Issue: Blend uniformity samples outside specification
+  Root Cause: Insufficient blending time
+  Corrective Action: Reblending performed
+  Preventive Action: Updated blending SOP with minimum time
+  Status: Closed
+  Date: Apr-May 2025
+
+- CAPA_005_Late_Delivery_Raw_Materials.pdf
+  Content: CAPA for late delivery of raw materials
+  Issue: Delayed shipment of API
+  Root Cause: Supplier production delay
+  Corrective Action: Expedited shipping
+  Preventive Action: Added backup supplier
+  Status: Open
+
+**CAPA REGISTER:**
+- CAPA_Register_2025.xlsx
+  Content: Complete register of all CAPAs for 2025
+  Columns: CAPA ID, Date Opened, Issue Description, Root Cause, Actions, Owner, Due Date, Status
+  Year: 2025
+
+**CAPA TREND ANALYSIS:**
+- CAPA_Trend_Analysis_Q1_2025.pdf
+  Content: Quarterly trend analysis of CAPAs
+  Quarter: Q1 2025
+  Analysis: Categorization by type, department, recurrence
+
+================================================================================
+REGULATORY DOCUMENTS
+================================================================================
+
+**SAFETY DATA SHEETS (SDS):**
+Note: SDS documents are also stored in LIMS for QC access, but master copies are in DMS
+
+- Master_SDS_Register.xlsx
+  Content: Register of all SDS documents
+  Includes: Material name, supplier, SDS version, review date, expiry date
+
+**REGULATORY SUBMISSIONS:**
+- Drug_Master_File_Aspirin_Tablets.pdf
+  Content: Drug Master File for Aspirin 500mg tablets
+  Regulatory Authority: FDA/EMA equivalent
+  Product: Aspirin 500mg film-coated tablets
+  Status: Approved
+
+**PRODUCT SPECIFICATIONS:**
+- Product_Specification_Aspirin_500mg.pdf
+  Content: Official product specification
+  Product: Aspirin 500mg tablets
+  Tests: Appearance, Identification, Assay, Impurities, Dissolution, Uniformity, Microbial Limits
+
+================================================================================
+SEARCH TIPS FOR AGENTS:
+================================================================================
+
+**FINDING SOPs:**
+- Current Version: Look in "13. List of all the SOPs/Version-2/" (most recent)
+- Previous Version: Look in "13. List of all the SOPs/Version-1/"
+- SOP Naming: "SOP-[DEPT]-[NUMBER]_[Title].pdf"
+- Departments: MFG (Manufacturing), QC (Quality Control), QA (Quality Assurance), 
+              ENG (Engineering), WH (Warehouse), HR (Human Resources)
+
+**FINDING TRAINING RECORDS:**
+- Training Matrices: "14. Comprehensive_training_records/training_matrices/"
+- File Pattern: "[Department]_Training_Matrix_2025.xlsx"
+- Departments: Manufacturing, QC, QA, Engineering, Warehouse
+
+**FINDING CAPA DOCUMENTS:**
+- Folder: "CAPA Documents/"
+- File Pattern: "CAPA_[NUMBER]_[Issue]_[Details].pdf"
+- Batches Referenced: ASP-25-001, ASP-25-002, ASP-25-003, ASP-25-004
+- CAPA Register: "CAPA_Register_2025.xlsx" (complete list)
+
+**FINDING REGULATORY DOCUMENTS:**
+- SDS Register: "Master_SDS_Register.xlsx"
+- Product Specifications: Search for "Product_Specification_[Product].pdf"
+- Regulatory Files: Search for "Drug_Master_File" or "Regulatory_Submission"
+
+**DOCUMENT TYPES:**
+- SOPs: Standard Operating Procedures
+- CAPA: Corrective and Preventive Action
+- SDS: Safety Data Sheet
+- DMF: Drug Master File
+- GMP: Good Manufacturing Practice
+
+**KEY SEARCH TERMS:**
+- For procedure questions: Search SOPs by department code
+- For training questions: Check training matrices
+- For quality issues: Check CAPA documents
+- For safety: Check SDS documents
+- For regulatory: Check DMF and product specifications
+
+================================================================================
+END OF DMS INDEX
+================================================================================
+

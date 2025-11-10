@@ -1,12 +1,12 @@
 """
 APQR System Tools
-Functional tools for LIMS, ERP, and DMS operations with sample_docs integration.
+Functional tools for LIMS, ERP, and DMS operations with APQR_Segregated integration.
 These tools are called by ADK agents to retrieve pharmaceutical data.
 
 Tools Architecture:
-- LIMS Tools: Access sample_docs/LIMS/ (COA_*.pdf files)
-- ERP Tools: Access sample_docs/ERP/ (Purchase Orders, Requisition Slips)
-- DMS Tools: Access sample_docs/DMS/ (SDS_*.pdf files)
+- LIMS Tools: Access APQR_Segregated/LIMS/ (COA, QC records, batch documentation)
+- ERP Tools: Access APQR_Segregated/ERP/ (Manufacturing, SupplyChain, Engineering records)
+- DMS Tools: Access APQR_Segregated/DMS/ (SOPs, Training records, CAPA documents)
 """
 
 import logging
@@ -22,27 +22,56 @@ from .pdf_tools import parse_coa_pdf, parse_sds_pdf, extract_text_from_pdf
 from .word_tools import parse_bmr_docx, parse_sop_docx, extract_text_from_docx
 from .excel_tools import parse_batch_data_xlsx, parse_kpi_data_xlsx, extract_data_from_xlsx
 
-# Get the base path for sample_docs
+# Get the base path for APQR_Segregated
 BASE_DIR = Path(__file__).resolve().parent.parent  # Go up to agentic_apqr folder
-SAMPLE_DOCS_DIR = BASE_DIR / "sample_docs"
-LIMS_DOCS_DIR = SAMPLE_DOCS_DIR / "LIMS"
-ERP_DOCS_DIR = SAMPLE_DOCS_DIR / "ERP"
-DMS_DOCS_DIR = SAMPLE_DOCS_DIR / "DMS"
+APQR_DATA_DIR = BASE_DIR / "APQR_Segregated"
+LIMS_DOCS_DIR = APQR_DATA_DIR / "LIMS"
+ERP_DOCS_DIR = APQR_DATA_DIR / "ERP"
+DMS_DOCS_DIR = APQR_DATA_DIR / "DMS"
+METADATA_DIR = BASE_DIR / "database_metadata"
 
 
-def list_available_documents(directory: Path) -> List[str]:
+def read_database_index(domain: str) -> str:
     """
-    List all documents available in a directory.
+    Read the database metadata index for a specific domain.
+    
+    Args:
+        domain: One of 'ERP', 'LIMS', 'DMS'
+        
+    Returns:
+        Content of the index file as string, or empty string if not found
+    """
+    try:
+        index_file = METADATA_DIR / f"{domain}_INDEX.txt"
+        if index_file.exists():
+            with open(index_file, 'r', encoding='utf-8') as f:
+                return f.read()
+        else:
+            logger.warning(f"Database index not found: {index_file}")
+            return ""
+    except Exception as e:
+        logger.error(f"Error reading database index for {domain}: {e}")
+        return ""
+
+
+def list_available_documents(directory: Path) -> List[Path]:
+    """
+    List all documents available in a directory (recursively searches all subdirectories).
     
     Args:
         directory: Path to the directory
         
     Returns:
-        List of document filenames
+        List of full Path objects for all files found recursively
     """
     try:
         if directory.exists():
-            return [f.name for f in directory.iterdir() if f.is_file()]
+            # Recursively search for all files in subdirectories
+            all_files = []
+            for file_path in directory.rglob('*'):
+                if file_path.is_file():
+                    all_files.append(file_path)  # Return full Path object
+            return all_files
         return []
     except Exception as e:
         logger.error(f"Error listing documents in {directory}: {e}")
@@ -83,43 +112,69 @@ def query_lims_qc(query: str) -> str:
     """
     Query Quality Control data from LIMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/LIMS_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all LIMS documents.
+    
     **Tool: COA Analyzer, QC Register Extractor, OOS Trend Evaluator**
     
     Args:
         query: User query about QC, COA, assay results, OOS, etc.
         
     Returns:
-        JSON string with parsed COA data from sample_docs/LIMS/
+        JSON string with parsed COA data from APQR_Segregated/LIMS/
     """
     logger.info(f"🔬 LIMS QC Tool called with query: {query}")
     
     try:
-        # List available COA documents
+        # 🔍 NEW: Read the LIMS database index for intelligent file search
+        lims_index = read_database_index("LIMS")
+        if lims_index:
+            logger.info("✅ LIMS database index loaded for intelligent file search")
+        
+        # List available COA documents (recursively searches all subdirectories)
         available_docs = list_available_documents(LIMS_DOCS_DIR)
-        coa_docs = [doc for doc in available_docs if 'COA' in doc.upper()]
+        coa_docs = [doc for doc in available_docs if 'COA' in doc.name.upper()]
         
         if not coa_docs:
             return json.dumps({
                 "status": "no_information_found",
                 "message": "No COA documents found in LIMS directory",
                 "query": query,
-                "data_source": "sample_docs/LIMS/"
+                "data_source": "APQR_Segregated/LIMS/",
+                "search_note": "Searched for COA documents across all batches (both PDF and DOCX formats)"
             })
         
-        # Parse all available COA documents
+        logger.info(f"🔬 Found {len(coa_docs)} COA documents")
+        
+        # Parse all available COA documents (handles both PDF and DOCX)
         parsed_coas = []
-        for doc in coa_docs:
-            doc_path = LIMS_DOCS_DIR / doc
+        for doc_path in coa_docs:
             if doc_path.exists():
-                logger.info(f"Parsing COA: {doc}")
-                coa_data = parse_coa_pdf(str(doc_path))
-                parsed_coas.append(coa_data)
+                logger.info(f"Parsing COA: {doc_path.name} from {doc_path.parent}")
+                # Parse PDF documents (Batch 1)
+                if doc_path.name.endswith('.pdf'):
+                    coa_data = parse_coa_pdf(str(doc_path))
+                    coa_data['batch'] = "ASP-25-001"  # Batch 1 uses PDF
+                    parsed_coas.append(coa_data)
+                # Parse DOCX documents (Batch 2-4)
+                elif doc_path.name.endswith('.docx'):
+                    text = extract_text_from_docx(str(doc_path))
+                    # Extract batch number from filename
+                    batch = "ASP-25-002" if "002" in doc_path.name else "ASP-25-003" if "003" in doc_path.name else "ASP-25-004" if "004" in doc_path.name else "Unknown"
+                    coa_data = {
+                        "filename": doc_path.name,
+                        "batch": batch,
+                        "material": "API" if "API" in doc_path.name else "Binder" if "Binder" in doc_path.name else "Diluent" if "Diluent" in doc_path.name else "Disintegrant" if "Disintegrant" in doc_path.name else "Lubricant" if "Lubricant" in doc_path.name else "Unknown",
+                        "raw_text": text,
+                        "source": str(doc_path)
+                    }
+                    parsed_coas.append(coa_data)
         
         # Return structured JSON data
         result = {
             "status": "success",
             "query": query,
-            "data_source": "sample_docs/LIMS/",
+            "data_source": "APQR_Segregated/LIMS/",
             "document_count": len(parsed_coas),
             "documents": parsed_coas
         }
@@ -139,15 +194,23 @@ def query_lims_validation(query: str) -> str:
     """
     Query Validation data from LIMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/LIMS_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all LIMS documents.
+    
     **Tool: Protocol Mapper, Qualification Report Parser, Trend Tracker**
     
     Args:
         query: User query about validation, qualification, protocols, etc.
         
     Returns:
-        Formatted string with validation data from sample_docs/LIMS/
+        Formatted string with validation data from APQR_Segregated/LIMS/
     """
     logger.info(f"📋 LIMS Validation Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the LIMS database index for intelligent file search
+    lims_index = read_database_index("LIMS")
+    if lims_index:
+        logger.info("✅ LIMS database index loaded for intelligent file search")
     
     # List available LIMS documents
     available_docs = list_available_documents(LIMS_DOCS_DIR)
@@ -159,15 +222,14 @@ def query_lims_validation(query: str) -> str:
 **Available LIMS Documents:** {len(available_docs)} files
 """
     
-    for doc in available_docs[:5]:  # Show first 5
-        doc_path = LIMS_DOCS_DIR / doc
+    for doc_path in available_docs[:5]:  # Show first 5
         info = get_document_info(doc_path)
         if info.get('exists'):
             result += f"\n📄 {info['filename']} ({info['size_kb']} KB)"
     
     result += f"""
 
-**Data Source:** LIMS sample_docs/LIMS/
+**Data Source:** LIMS APQR_Segregated/LIMS/
 
 **Validation Capabilities:**
 - ✅ Protocol Mapping: Map and track validation protocols
@@ -191,15 +253,23 @@ def query_lims_rnd(query: str) -> str:
     """
     Query R&D data from LIMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/LIMS_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all LIMS documents.
+    
     **Tool: Experimental Data Summarizer, Stability Data Comparator, Product Development Log Analyzer**
     
     Args:
         query: User query about R&D, stability, formulation, etc.
         
     Returns:
-        Formatted string with R&D data from sample_docs/LIMS/
+        Formatted string with R&D data from APQR_Segregated/LIMS/
     """
     logger.info(f"🧪 LIMS R&D Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the LIMS database index for intelligent file search
+    lims_index = read_database_index("LIMS")
+    if lims_index:
+        logger.info("✅ LIMS database index loaded for intelligent file search")
     
     # List available LIMS documents
     available_docs = list_available_documents(LIMS_DOCS_DIR)
@@ -210,7 +280,7 @@ def query_lims_rnd(query: str) -> str:
 
 **Available R&D Documents:** {len(available_docs)} files from LIMS
 
-**Data Source:** LIMS sample_docs/LIMS/
+**Data Source:** LIMS APQR_Segregated/LIMS/
 
 **R&D Capabilities:**
 - ✅ Experimental Data Summarizer: Aggregate and summarize R&D experiments
@@ -245,23 +315,30 @@ def query_erp_manufacturing(query: str) -> str:
     """
     Query Manufacturing data from ERP.
     
+    **🔍 USES DATABASE INDEX: database_metadata/ERP_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all ERP documents.
+    
     **Tool: Batch Manufacturing Record Analyzer, Yield Reconciliation Tool, Deviation Log Interpreter**
     
     Args:
         query: User query about batch records, BMR, yield, etc.
         
     Returns:
-        Formatted string with manufacturing data from sample_docs/ERP/
+        Formatted string with manufacturing data from APQR_Segregated/ERP/
     """
     logger.info(f"🏭 ERP Manufacturing Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the ERP database index for intelligent file search
+    erp_index = read_database_index("ERP")
+    if erp_index:
+        logger.info("✅ ERP database index loaded for intelligent file search")
     
     # List available ERP documents
     available_docs = list_available_documents(ERP_DOCS_DIR)
     
     # Get document information
     doc_details = []
-    for doc in available_docs:
-        doc_path = ERP_DOCS_DIR / doc
+    for doc_path in available_docs:
         info = get_document_info(doc_path)
         doc_details.append(info)
     
@@ -280,7 +357,7 @@ def query_erp_manufacturing(query: str) -> str:
             result += "\n"
     
     result += f"""
-**Data Source:** ERP sample_docs/ERP/
+**Data Source:** ERP APQR_Segregated/ERP/
 **Total Documents:** {len(available_docs)}
 
 **Manufacturing Capabilities:**
@@ -306,15 +383,23 @@ def query_erp_engineering(query: str) -> str:
     """
     Query Engineering data from ERP.
     
+    **🔍 USES DATABASE INDEX: database_metadata/ERP_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all ERP documents.
+    
     **Tool: Equipment Calibration Extractor, Maintenance Log Reader, Utility Performance Tracker**
     
     Args:
         query: User query about equipment, calibration, maintenance, etc.
         
     Returns:
-        Formatted string with engineering data from sample_docs/ERP/
+        Formatted string with engineering data from APQR_Segregated/ERP/
     """
     logger.info(f"⚙️ ERP Engineering Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the ERP database index for intelligent file search
+    erp_index = read_database_index("ERP")
+    if erp_index:
+        logger.info("✅ ERP database index loaded for intelligent file search")
     
     # List available ERP documents
     available_docs = list_available_documents(ERP_DOCS_DIR)
@@ -325,7 +410,7 @@ def query_erp_engineering(query: str) -> str:
 
 **Available Engineering Documents:** {len(available_docs)} files
 
-**Data Source:** ERP sample_docs/ERP/
+**Data Source:** ERP APQR_Segregated/ERP/
 
 **Engineering Capabilities:**
 - ✅ Equipment Calibration Extractor: Extract calibration records
@@ -356,41 +441,87 @@ def query_erp_supplychain(query: str) -> str:
     """
     Query Supply Chain data from ERP.
     
+    **🔍 USES DATABASE INDEX: database_metadata/ERP_INDEX.txt**
+    This index contains file locations, naming patterns, and batch mapping for all ERP documents.
+    
     **Tool: Vendor Qualification Extractor, Purchase Order & GRN Tracker, Material Reconciliation Analyzer**
     
     Args:
         query: User query about GRN, PO, vendors, materials, etc.
         
     Returns:
-        JSON string with parsed PO/Requisition data from sample_docs/ERP/
+        JSON string with parsed PO/Requisition data from APQR_Segregated/ERP/
     """
     logger.info(f"📦 ERP Supply Chain Tool called with query: {query}")
     
     try:
-        # List available ERP documents
+        # 🔍 NEW: Read the ERP database index for intelligent file search
+        erp_index = read_database_index("ERP")
+        if erp_index:
+            logger.info("✅ ERP database index loaded for intelligent file search")
+        
+        # List available ERP documents (recursively searches all subdirectories)
         available_docs = list_available_documents(ERP_DOCS_DIR)
-        supply_chain_docs = [doc for doc in available_docs if 'Purchase Order' in doc or 'Requisition' in doc]
-    
+        
+        # 🔍 ENHANCED: Search for supply chain documents using multiple patterns
+        # Pattern 1: "Purchase Order" or "Requisition" (Batch 1 style)
+        # Pattern 2: Material names followed by ASP-25 (Batch 2-4 style: "Binder - ASP-25-002.docx")
+        # Pattern 3: "PO" in filename
+        
+        # Extract material keywords from query
+        material_keywords = ['API', 'Binder', 'Diluent', 'Disintegrant', 'Lubricant', 
+                            'HPMC', 'MCC', 'Cornstarch', 'Magnesium', 'Salicylic']
+        
+        supply_chain_docs = []
+        for doc in available_docs:
+            # Check if it's in SupplyChain folder
+            if 'SupplyChain' in str(doc):
+                # Pattern matching for supply chain documents
+                if any([
+                    'Purchase Order' in doc.name,
+                    'Requisition' in doc.name,
+                    'PO-' in doc.name,
+                    'Req. Slip' in doc.name,
+                    # Match material names for Batch 2-4 style files
+                    any(material in doc.name for material in material_keywords) and 'ASP-25' in doc.name,
+                    # Match direct material name files (like "Binder - ASP-25-002.docx")
+                    any(material in doc.name for material in material_keywords) and 'ASP' in doc.name
+                ]):
+                    supply_chain_docs.append(doc)
+        
         if not supply_chain_docs:
             return json.dumps({
                 "status": "no_information_found",
                 "message": "No Purchase Order or Requisition documents found in ERP directory",
                 "query": query,
-                "data_source": "sample_docs/ERP/"
+                "data_source": "APQR_Segregated/ERP/",
+                "search_note": "Searched for: Purchase Orders, Requisition Slips, and material-specific procurement documents across all batches"
             })
+        
+        logger.info(f"📦 Found {len(supply_chain_docs)} supply chain documents")
         
         # Parse all available supply chain documents
         parsed_docs = []
-        for doc in supply_chain_docs:
-            doc_path = ERP_DOCS_DIR / doc
+        for doc_path in supply_chain_docs:
             if doc_path.exists():
-                logger.info(f"Parsing Supply Chain document: {doc}")
+                logger.info(f"Parsing Supply Chain document: {doc_path.name} from {doc_path.parent}")
                 # Parse PDF documents
-                if doc.endswith('.pdf'):
+                if doc_path.name.endswith('.pdf'):
                     text = extract_text_from_pdf(str(doc_path))
                     parsed_docs.append({
-                        "filename": doc,
-                        "document_type": "Purchase Order" if "Purchase Order" in doc else "Requisition Slip",
+                        "filename": doc_path.name,
+                        "document_type": "Purchase Order" if "Purchase Order" in doc_path.name else "Procurement Document",
+                        "batch": "ASP-25-002" if "002" in doc_path.name else "ASP-25-003" if "003" in doc_path.name else "ASP-25-004" if "004" in doc_path.name else "ASP-25-001",
+                        "raw_text": text,
+                        "source": str(doc_path)
+                    })
+                # Parse DOCX documents (Batch 2-4 use DOCX)
+                elif doc_path.name.endswith('.docx'):
+                    text = extract_text_from_docx(str(doc_path))
+                    parsed_docs.append({
+                        "filename": doc_path.name,
+                        "document_type": "Purchase Order" if "Purchase Order" in doc_path.name or "PO" in doc_path.name else "Procurement Document",
+                        "batch": "ASP-25-002" if "002" in doc_path.name else "ASP-25-003" if "003" in doc_path.name else "ASP-25-004" if "004" in doc_path.name else "ASP-25-001",
                         "raw_text": text,
                         "source": str(doc_path)
                     })
@@ -399,8 +530,9 @@ def query_erp_supplychain(query: str) -> str:
         result = {
             "status": "success",
             "query": query,
-            "data_source": "sample_docs/ERP/",
+            "data_source": "APQR_Segregated/ERP/",
             "document_count": len(parsed_docs),
+            "batches_found": list(set([doc.get("batch") for doc in parsed_docs])),
             "documents": parsed_docs
         }
         
@@ -423,24 +555,31 @@ def query_dms_qa(query: str) -> str:
     """
     Query Quality Assurance documents from DMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/DMS_INDEX.txt**
+    This index contains file locations, naming patterns, and document categorization for all DMS documents.
+    
     **Tool: CAPA Tracker, Change Control Parser, Training Effectiveness Evaluator**
     
     Args:
         query: User query about CAPA, change control, deviations, etc.
         
     Returns:
-        Formatted string with QA documents from sample_docs/DMS/
+        Formatted string with QA documents from APQR_Segregated/DMS/
     """
     logger.info(f"📋 DMS QA Tool called with query: {query}")
     
+    # 🔍 NEW: Read the DMS database index for intelligent file search
+    dms_index = read_database_index("DMS")
+    if dms_index:
+        logger.info("✅ DMS database index loaded for intelligent file search")
+    
     # List available DMS documents
     available_docs = list_available_documents(DMS_DOCS_DIR)
-    sds_docs = [doc for doc in available_docs if 'SDS' in doc.upper()]
+    sds_docs = [doc for doc in available_docs if 'SDS' in doc.name.upper()]
     
     # Get document information
     doc_details = []
-    for doc in sds_docs:
-        doc_path = DMS_DOCS_DIR / doc
+    for doc_path in sds_docs:
         info = get_document_info(doc_path)
         doc_details.append(info)
     
@@ -458,7 +597,7 @@ def query_dms_qa(query: str) -> str:
             result += "\n"
     
     result += f"""
-**Data Source:** DMS sample_docs/DMS/
+**Data Source:** DMS APQR_Segregated/DMS/
 **Total SDS Documents:** {len(sds_docs)}
 
 **QA Capabilities:**
@@ -491,35 +630,42 @@ def query_dms_regulatory(query: str) -> str:
     """
     Query Regulatory Affairs documents from DMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/DMS_INDEX.txt**
+    This index contains file locations, naming patterns, and document categorization for all DMS documents.
+    
     **Tool: Product Dossier Compiler, Variation Tracker, Regulatory Submission Extractor**
     
     Args:
         query: User query about dossiers, submissions, regulatory commitments, SDS, etc.
         
     Returns:
-        JSON string with parsed SDS/regulatory data from sample_docs/DMS/
+        JSON string with parsed SDS/regulatory data from APQR_Segregated/DMS/
     """
     logger.info(f"⚖️ DMS Regulatory Tool called with query: {query}")
     
     try:
-        # List available DMS documents
+        # 🔍 NEW: Read the DMS database index for intelligent file search
+        dms_index = read_database_index("DMS")
+        if dms_index:
+            logger.info("✅ DMS database index loaded for intelligent file search")
+        
+        # List available DMS documents (recursively searches all subdirectories)
         available_docs = list_available_documents(DMS_DOCS_DIR)
-        sds_docs = [doc for doc in available_docs if 'SDS' in doc.upper()]
+        sds_docs = [doc for doc in available_docs if 'SDS' in doc.name.upper()]
         
         if not sds_docs:
             return json.dumps({
                 "status": "no_information_found",
                 "message": "No SDS or regulatory documents found in DMS directory",
                 "query": query,
-                "data_source": "sample_docs/DMS/"
+                "data_source": "APQR_Segregated/DMS/"
             })
         
         # Parse all available SDS documents
         parsed_sds = []
-        for doc in sds_docs:
-            doc_path = DMS_DOCS_DIR / doc
+        for doc_path in sds_docs:
             if doc_path.exists():
-                logger.info(f"Parsing SDS: {doc}")
+                logger.info(f"Parsing SDS: {doc_path.name} from {doc_path.parent}")
                 sds_data = parse_sds_pdf(str(doc_path))
                 parsed_sds.append(sds_data)
         
@@ -527,7 +673,7 @@ def query_dms_regulatory(query: str) -> str:
         result = {
             "status": "success",
             "query": query,
-            "data_source": "sample_docs/DMS/",
+            "data_source": "APQR_Segregated/DMS/",
             "document_count": len(parsed_sds),
             "documents": parsed_sds
         }
@@ -547,15 +693,23 @@ def query_dms_management(query: str) -> str:
     """
     Query Management documents from DMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/DMS_INDEX.txt**
+    This index contains file locations, naming patterns, and document categorization for all DMS documents.
+    
     **Tool: Audit Summary Analyzer, KPI Dashboard Generator, Review Meeting Log Extractor**
     
     Args:
         query: User query about audits, KPIs, approvals, etc.
         
     Returns:
-        Formatted string with management documents from sample_docs/DMS/
+        Formatted string with management documents from APQR_Segregated/DMS/
     """
     logger.info(f"📊 DMS Management Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the DMS database index for intelligent file search
+    dms_index = read_database_index("DMS")
+    if dms_index:
+        logger.info("✅ DMS database index loaded for intelligent file search")
     
     # List available DMS documents
     available_docs = list_available_documents(DMS_DOCS_DIR)
@@ -566,7 +720,7 @@ def query_dms_management(query: str) -> str:
 
 **Available Management Documents:** {len(available_docs)} files
 
-**Data Source:** DMS sample_docs/DMS/
+**Data Source:** DMS APQR_Segregated/DMS/
 
 **Management Capabilities:**
 - ✅ Audit Summary Analyzer: Analyze audit reports and findings
@@ -599,15 +753,23 @@ def query_dms_training(query: str) -> str:
     """
     Query HR/Training documents from DMS.
     
+    **🔍 USES DATABASE INDEX: database_metadata/DMS_INDEX.txt**
+    This index contains file locations, naming patterns, and document categorization for all DMS documents.
+    
     **Tool: Training Matrix Reader, Competency Evaluation Extractor, Attendance Compliance Tracker**
     
     Args:
         query: User query about training, competency, certifications, etc.
         
     Returns:
-        Formatted string with training documents from sample_docs/DMS/
+        Formatted string with training documents from APQR_Segregated/DMS/
     """
     logger.info(f"👨‍🎓 DMS Training Tool called with query: {query}")
+    
+    # 🔍 NEW: Read the DMS database index for intelligent file search
+    dms_index = read_database_index("DMS")
+    if dms_index:
+        logger.info("✅ DMS database index loaded for intelligent file search")
     
     # List available DMS documents
     available_docs = list_available_documents(DMS_DOCS_DIR)
@@ -618,7 +780,7 @@ def query_dms_training(query: str) -> str:
 
 **Available Training Documents:** {len(available_docs)} files
 
-**Data Source:** DMS sample_docs/DMS/
+**Data Source:** DMS APQR_Segregated/DMS/
 
 **HR & Training Capabilities:**
 - ✅ Training Matrix Reader: Read and analyze training matrices

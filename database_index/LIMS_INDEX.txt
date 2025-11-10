@@ -1,0 +1,297 @@
+================================================================================
+                    LIMS DOMAIN DATABASE INDEX
+================================================================================
+Database Path: APQR_Segregated/LIMS/
+Last Updated: 2025-11-10
+Total Batches: 4
+
+================================================================================
+BATCH STRUCTURE OVERVIEW
+================================================================================
+
+LIMS/
+├── Batch_(Jan___Feb_Batch_1)/
+│   ├── 01. Aspirin_Procurement_Details/
+│   ├── 02. APQR_Quarantine and GRN Logs/
+│   ├── 03. Sampling Booth Logs/
+│   ├── 04. Internal QC Register & COA/
+│   ├── 05. Dispensing Logs/
+│   ├── 07. Compression/
+│   ├── 08. Packaging_Materials_Procurement/
+│   ├── 09. Sampling And Quarantine/
+│   └── APQR Documents (Jan - Feb Batch 1)/
+├── Batch_February_March_Batch_2/
+│   ├── 01. Aspirin_Procurement_Details/
+│   ├── 02. APQR_Quarantine and GRN Logs/
+│   ├── 03. Sampling Booth Logs/
+│   ├── 04. Internal QC Register & COA/
+│   ├── 08. Packaging_Materials_Procurement/
+│   ├── 09. Sampling And Quarantine/
+│   └── APQR Documents February-March Batch 2/
+├── Batch_March_April_Batch_3/
+│   ├── 01. Aspirin_Procurement_Details/
+│   ├── 02. APQR_Quarantine and GRN Logs/
+│   ├── 03. Sampling Booth Logs/
+│   ├── 04. Internal QC Register & COA/
+│   ├── 08. Packaging_Materials_Procurement/
+│   ├── 09. Sampling And Quarantine/
+│   └── APQR Documents March-April Batch 3/
+└── Batch_April_May_Batch_4/
+    ├── 01. Aspirin_Procurement_Details/
+    ├── 02. APQR_Quarantine and GRN Logs/
+    ├── 03. Sampling Booth Logs/
+    ├── 04. Internal QC Register & COA/
+    ├── 08. Packaging_Materials_Procurement/
+    ├── 09. Sampling And Quarantine/
+    └── APQR Documents April-May Batch 4/
+
+================================================================================
+BATCH 1: January-February (Batch_(Jan___Feb_Batch_1))
+================================================================================
+
+📂 01. Aspirin_Procurement_Details/ (16 files)
+────────────────────────────────────────────────────────────────────────────
+
+   CERTIFICATES OF ANALYSIS (5 PDF):
+   ├── COA_API.pdf                           → Salicylic Acid (API) COA
+   │   └── Contains: Assay results, specifications, batch number, QC status
+   ├── COA_Binder.pdf                        → HPMC (Binder) COA
+   │   └── Contains: Viscosity, moisture, pH, assay results
+   ├── COA_Disintegrant.pdf                  → Disintegrant COA
+   │   └── Contains: Purity, particle size, moisture content
+   ├── COA_Filler.pdf                        → Filler COA
+   │   └── Contains: Particle size, bulk density, moisture
+   └── COA_Lubricant.pdf                     → Lubricant COA
+       └── Contains: Assay, particle size, loss on drying
+   
+   MATERIAL SPECIFICATIONS (1 XLSX):
+   └── Material_Specification_Master1.0.xlsx → Master material specs
+   
+   REQUISITION SLIPS (10 DOCX):
+   └── Req. Slip - Shipper Case Label - ASP-25-001 to 010.docx
+
+📂 02. APQR_Quarantine and GRN Logs/ (111 files: 72 PNG, 39 PDF)
+────────────────────────────────────────────────────────────────────────────
+   ├── GRN (Goods Receipt Note) logs for incoming materials
+   ├── Quarantine status tracking
+   └── Material release records
+
+📂 03. Sampling Booth Logs/ (32 files: 17 PDF, 15 PNG)
+────────────────────────────────────────────────────────────────────────────
+   ├── Sampling booth cleanliness logs
+   ├── Environmental monitoring records
+   └── Sampling activity logs
+
+📂 04. Internal QC Register & COA/ (49 files: 37 PDF, 12 PNG)
+────────────────────────────────────────────────────────────────────────────
+   ├── In-process quality control (IPQC) records
+   ├── Internal COAs for intermediate products
+   └── QC testing registers
+
+📂 05. Dispensing Logs/ (12 PNG files)
+────────────────────────────────────────────────────────────────────────────
+   ├── API.png, CS.png, HPMC.png, MGS.png     → Material-specific logs
+   └── DISP-ASP25001-01-01 to 05.png          → Dispensing records
+
+📂 07. Compression/ (32 files)
+────────────────────────────────────────────────────────────────────────────
+   
+   IN-PROCESS QC RECORDS (PDF):
+   ├── IPQC_Friability_1100 to 1600.pdf      → Friability tests (6 files)
+   ├── IPQC_Hardness_1100 to 1600.pdf        → Hardness tests (6 files)
+   ├── IPQC_Thickness_1100 to 1600.pdf       → Thickness tests (6 files)
+   └── IPQC_WeightVariation_1100 to 1600.pdf → Weight variation (6 files)
+   
+   EQUIPMENT IMAGES (PNG):
+   ├── Analytical Balance.png
+   ├── Friabilator.png
+   ├── Hardness.png, Tablet Hardness Tester.png
+   ├── TCP01.png (Tablet Compression Machine)
+   ├── Thickness Gauge.png, Thickness.png
+   └── Tablet Weight.png
+
+📂 08. Packaging_Materials_Procurement/ (4 PDF files)
+────────────────────────────────────────────────────────────────────────────
+   └── COAs for packaging materials
+
+📂 09. Sampling And Quarantine/ (45 files: 24 PDF, 21 PNG)
+────────────────────────────────────────────────────────────────────────────
+   ├── Material sampling records
+   ├── Quarantine temperature/RH monitoring
+   └── Environmental monitoring logs
+
+📂 APQR Documents (Jan - Feb Batch 1)/ (268 files: 141 PDF, 127 PNG)
+────────────────────────────────────────────────────────────────────────────
+   └── Comprehensive APQR documentation for Batch 1
+
+================================================================================
+BATCH 2: February-March (Batch_February_March_Batch_2)
+================================================================================
+
+📂 01. Aspirin_Procurement_Details/ (6 files: 5 DOCX, 1 XLSX)
+────────────────────────────────────────────────────────────────────────────
+   ├── Requisition slips (5 DOCX)
+   └── Material_Specification_Master.xlsx
+   
+   **NOTE**: No COA files in this folder for Batch 2
+   
+📂 02. APQR_Quarantine and GRN Logs/ (3 XLSX files)
+📂 03. Sampling Booth Logs/ (2 XLSX files)
+📂 04. Internal QC Register & COA/ (6 XLSX files)
+────────────────────────────────────────────────────────────────────────────
+   **CRITICAL**: Batch 2 COAs are in this folder, not folder 01!
+   └── Contains internal QC test results and COAs
+
+📂 08. Packaging_Materials_Procurement/ (8 files: 7 DOCX, 1 PDF)
+📂 09. Sampling And Quarantine/ (9 DOCX files)
+
+📂 APQR Documents February-March Batch 2/ (20 files: 11 XLSX, 9 DOCX)
+────────────────────────────────────────────────────────────────────────────
+   └── Batch 2 APQR documentation
+
+================================================================================
+BATCH 3: March-April (Batch_March_April_Batch_3)
+================================================================================
+
+📂 01. Aspirin_Procurement_Details/ (6 files: 5 DOCX, 1 XLSX)
+────────────────────────────────────────────────────────────────────────────
+   ├── Requisition slips (5 DOCX)
+   └── Material_Specification_Master.xlsx
+   
+   **NOTE**: No COA files in this folder for Batch 3
+
+📂 02. APQR_Quarantine and GRN Logs/ (3 XLSX files)
+📂 03. Sampling Booth Logs/ (2 XLSX files)
+📂 04. Internal QC Register & COA/ (6 XLSX files)
+────────────────────────────────────────────────────────────────────────────
+   **CRITICAL**: Batch 3 COAs are in this folder, not folder 01!
+   └── Contains internal QC test results and COAs
+
+📂 08. Packaging_Materials_Procurement/ (8 files: 7 DOCX, 1 PDF)
+📂 09. Sampling And Quarantine/ (9 DOCX files)
+
+📂 APQR Documents March-April Batch 3/ (20 files: 11 XLSX, 9 DOCX)
+────────────────────────────────────────────────────────────────────────────
+   └── Batch 3 APQR documentation
+
+================================================================================
+BATCH 4: April-May (Batch_April_May_Batch_4)
+================================================================================
+
+📂 01. Aspirin_Procurement_Details/ (6 files: 5 DOCX, 1 XLSX)
+────────────────────────────────────────────────────────────────────────────
+   ├── Requisition slips (5 DOCX)
+   └── Material_Specification_Master.xlsx
+   
+   **NOTE**: No COA files in this folder for Batch 4
+
+📂 02. APQR_Quarantine and GRN Logs/ (3 XLSX files)
+📂 03. Sampling Booth Logs/ (2 XLSX files)
+📂 04. Internal QC Register & COA/ (6 XLSX files)
+────────────────────────────────────────────────────────────────────────────
+   **CRITICAL**: Batch 4 COAs are in this folder, not folder 01!
+   └── Contains internal QC test results and COAs
+
+📂 08. Packaging_Materials_Procurement/ (8 files: 7 DOCX, 1 PDF)
+📂 09. Sampling And Quarantine/ (9 DOCX files)
+
+📂 APQR Documents April-May Batch 4/ (20 files: 11 XLSX, 9 DOCX)
+────────────────────────────────────────────────────────────────────────────
+   └── Batch 4 APQR documentation
+
+================================================================================
+QUERY MAPPING GUIDE FOR SUB-AGENTS
+================================================================================
+
+🔍 QC QUERIES (query_lims_qc):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "COA for [Material]"
+Query Pattern: "Certificate of Analysis for [Material] [Batch]"
+Query Pattern: "QC test results for [Material]"
+Query Pattern: "Assay results"
+Query Pattern: "Out of specification / OOS"
+
+Material Keywords → File Mapping:
+├── API / Salicylic Acid        → COA_API.pdf (Batch 1 only)
+├── Binder / HPMC               → COA_Binder.pdf (Batch 1 only)
+├── Disintegrant / CSS          → COA_Disintegrant.pdf (Batch 1 only)
+├── Filler / MCC                → COA_Filler.pdf (Batch 1 only)
+└── Lubricant / MGS             → COA_Lubricant.pdf (Batch 1 only)
+
+**CRITICAL**: COA Location by Batch:
+├── Batch 1: 01. Aspirin_Procurement_Details/COA_[Material].pdf
+├── Batch 2: 04. Internal QC Register & COA/ (XLSX files)
+├── Batch 3: 04. Internal QC Register & COA/ (XLSX files)
+└── Batch 4: 04. Internal QC Register & COA/ (XLSX files)
+
+In-Process Quality Control (IPQC):
+├── Friability Tests     → 07. Compression/IPQC_Friability_*.pdf
+├── Hardness Tests       → 07. Compression/IPQC_Hardness_*.pdf
+├── Thickness Tests      → 07. Compression/IPQC_Thickness_*.pdf
+└── Weight Variation     → 07. Compression/IPQC_WeightVariation_*.pdf
+
+────────────────────────────────────────────────────────────────────────────
+
+🔍 VALIDATION QUERIES (query_lims_validation):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "Equipment qualification"
+Query Pattern: "Calibration records"
+Query Pattern: "Validation status"
+Query Pattern: "Analytical method validation"
+
+Search Locations:
+├── Equipment images     → 07. Compression/*.png
+├── Sampling validation  → 03. Sampling Booth Logs/
+└── APQR Documents       → APQR Documents [Batch]/
+
+────────────────────────────────────────────────────────────────────────────
+
+🔍 R&D QUERIES (query_lims_rnd):
+────────────────────────────────────────────────────────────────────────────
+
+Query Pattern: "Formulation development"
+Query Pattern: "Stability studies"
+Query Pattern: "Method development"
+Query Pattern: "Process optimization"
+
+Search Locations:
+├── Material Specifications → 01. Aspirin_Procurement_Details/Material_Specification_Master*.xlsx
+└── APQR Documents         → APQR Documents [Batch]/
+
+================================================================================
+IMPORTANT NOTES FOR AGENTS
+================================================================================
+
+1. **COA LOCATION VARIES BY BATCH**:
+   - Batch 1: COA files are in "01. Aspirin_Procurement_Details/" as PDFs
+   - Batches 2-4: COA data is in "04. Internal QC Register & COA/" as XLSX
+   
+2. **FILE FORMAT DIFFERENCES**:
+   - Batch 1: Mostly PDF and PNG files
+   - Batches 2-4: Mostly DOCX and XLSX files
+   
+3. **MATERIAL NAMES** (Multiple aliases):
+   - API = Salicylic Acid = Active Pharmaceutical Ingredient
+   - Binder = HPMC = Hydroxypropyl methyl cellulose
+   - Disintegrant = CSS = Croscarmellose Sodium
+   - Filler = MCC = Microcrystalline Cellulose
+   - Lubricant = MGS = Magnesium Stearate
+
+4. **COMPREHENSIVE SEARCHES**: For "all batches" queries:
+   - MUST check folder structure for each batch
+   - COAs are in DIFFERENT folders for Batch 1 vs Batches 2-4
+   - Aggregate results from all relevant folders
+
+5. **IPQC DATA**: Time-stamped (1100, 1200, 1300, 1400, 1500, 1600)
+   - These represent hourly in-process checks during compression
+
+6. **QUARANTINE vs SAMPLING**: 
+   - Folder 02: Incoming material quarantine/GRN
+   - Folder 09: Sampling activities and environmental monitoring
+
+================================================================================
+END OF LIMS INDEX
+================================================================================
+
