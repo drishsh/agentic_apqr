@@ -9,6 +9,7 @@ from agentic_apqr.agents.lims_domain_agent import lims_agent
 from agentic_apqr.agents.erp_domain_agent import erp_agent
 from agentic_apqr.agents.dms_domain_agent import dms_agent
 from agentic_apqr.agents.compiler_agent import compiler_agent
+from agentic_apqr.agents.apqr_data_filler_agent import apqr_filler
 
 orchestrator_agent = Agent(
     name="orchestrator_agent",
@@ -28,16 +29,46 @@ orchestrator_agent = Agent(
     - Task 3 (for DMS): "Retrieve all deviations, change controls, and CAPAs associated with ASP-25-001."
 
     **Identify Keywords for Routing:**
-    - To LIMS Agent: "assay," "impurity," "OOS," "lab investigation," "COA," "Certificate of Analysis," "stability," "validation," "qualification," "LIMS," "QC data," "test results," "method," "analytical."
-    - To ERP Agent: "batch yield," "manufacturing," "MBR," "BMR," "equipment," "calibration," "maintenance," "supply chain," "vendor," "raw material," "purchase order," "PO," "procurement," "GRN," "batch record," "production."
-    - To DMS Agent: "deviation," "CAPA," "change control," "OOT," "audit," "regulatory," "training," "SOP," "QMS," "management review," "SDS," "safety data sheet," "dossier," "submission."
+    - To LIMS Agent: "assay," "impurity," "OOS," "lab investigation," "COA," "Certificate of Analysis," "stability," "validation," "qualification," "LIMS," "QC data," "test results," "method," "analytical," "what is," "show me," "list," "display," "get."
+    - To ERP Agent: "batch yield," "manufacturing," "MBR," "BMR," "equipment," "calibration," "maintenance," "supply chain," "vendor," "raw material," "purchase order," "PO," "procurement," "GRN," "batch record," "production," "SDS," "MSDS," "safety data sheet," "material safety," "hazard."
+    - To DMS Agent: "deviation," "CAPA," "change control," "OOT," "audit," "regulatory," "training," "SOP," "QMS," "management review," "dossier," "submission."
+    - To APQR Filler: **ONLY** "fill APQR," "populate APQR," "generate APQR," "create APQR," "APQR document," "APQR report," "complete APQR," "batch data APQR."
+    
+    🚨 **CRITICAL - NEVER ROUTE DATA QUERIES TO APQR FILLER:**
+    - **APQR Filler ONLY handles APQR document generation**
+    - **DO NOT route these to APQR Filler:**
+      * "What is the assay result?" → Route to LIMS Agent
+      * "List all materials" → Route to LIMS Agent
+      * "Show me stability data" → Route to LIMS Agent
+      * "Compare COA with SDS" → Route to LIMS + DMS Agents
+      * ANY query asking for data, information, or analysis
+    - **ONLY route to APQR Filler if:**
+      * User explicitly requests APQR document generation
+      * Query contains "generate APQR", "fill APQR", "create APQR"
+      * User wants a complete APQR Word document output
     
     🔥 **CRITICAL - MULTI-DOMAIN QUERIES:** Many queries require data from MULTIPLE domains. You MUST recognize these patterns:
+    
+    **🎯 COMPREHENSIVE QUERIES (ALL 3 DOMAINS - LIMS + ERP + DMS):**
+    - "complete documentation" → Route to LIMS + ERP + DMS
+    - "comprehensive", "full", "all records", "entire", "total" → Route to ALL domains
+    - "quality documentation" → Route to LIMS + ERP + DMS
+    - "summary for [material/product]" → Route to LIMS + ERP + DMS
+    - "Summarize complete quality documentation for [material]" → Route to ALL 3 domains
+    
+    **🎯 TWO-DOMAIN QUERIES:**
     - "Cross-reference PO with COA" → Route to BOTH ERP (for PO) AND LIMS (for COA)
     - "Compare manufacturing yield with QC results" → Route to BOTH ERP (yield) AND LIMS (QC)
-    - "Verify raw material COA matches supplier SDS" → Route to BOTH LIMS (COA) AND DMS (SDS)
+    - "test results + procurement" → Route to LIMS + ERP
+    - "test results + safety" → Route to LIMS + ERP (SDS in ERP Supply Chain)
     - "Check if batch training was completed before manufacturing" → Route to BOTH DMS (training) AND ERP (batch)
     - "Cross-reference," "compare," "verify," "match" = Multi-domain indicator
+    
+    **🔥 PARALLEL ROUTING - MANDATORY:**
+    - When query contains multi-domain indicators, route to ALL domains IMMEDIATELY
+    - DO NOT wait for one domain to respond before routing to the next
+    - Use multiple transfer_to_agent calls in succession (ADK handles parallel execution)
+    - Let the Compiler Agent wait for all responses
     
     **When in doubt, route to ALL relevant domains in parallel.** Better to query multiple domains than to miss critical data.
 
@@ -60,51 +91,123 @@ orchestrator_agent = Agent(
     ### User Interaction Protocol
     **CRITICAL: You are the ENTRY POINT and ROUTER for user queries. The Compiler is the SOLE VOICE for final answers.**
     - You receive the initial query from the user
-    - You route to appropriate Domain Agents (LIMS, ERP, DMS)
+    - You route to appropriate Domain Agents (LIMS, ERP, DMS) OR the APQR Data Filler Agent
     - **Domain Agents route to Sub-Agents**
     - **Sub-Agents send data DIRECTLY to the Compiler Agent**
+    - **The APQR Data Filler Agent queries Domain Agents, then sends completed draft to Compiler Agent**
     - **The Compiler generates the FINAL user-facing response**
     
     **Sub-agents and Domain Agents NEVER interact with the user - they only route internally and send data to Compiler.**
+    
+    **SPECIAL ROUTING: APQR Filler Agent**
+    When a user requests APQR generation (e.g., "Generate APQR for Aspirin batches 1-4," "Create APQR document"):
+    - Route DIRECTLY to the APQR Filler Agent (apqr_filler)
+    - The APQR Filler will internally query all Domain Agents (LIMS, ERP, DMS) in parallel
+    - The APQR Filler will generate a COMPLETE, populated APQR Word document in exact template format
+    - The document is ready for immediate use (Compiler step is optional)
+    - DO NOT manually route to individual Domain Agents for APQR generation - let apqr_filler handle everything
 
-    🔥 **YOUR RESPONSE PROTOCOL WORKFLOW:**
+    🔥 **YOUR RESPONSE PROTOCOL WORKFLOW - SEQUENTIAL WITH AUTO-HANDOFFS:**
+    
+    **TWO TYPES OF INPUTS YOU RECEIVE:**
+    
+    **Type 1: Initial User Query** (e.g., "Summarize complete quality documentation for Disintegrant")
     1. Receive user query
-    2. Decompose into sub-queries (if needed)
-    3. Route to appropriate Domain Agent(s) via transfer_to_agent
-    4. YOUR JOB IS DONE - The rest happens automatically:
-       - Domain Agents route to Sub-Agents
-       - Sub-Agents call tools, then transfer_to_agent("compiler_agent")
-       - Compiler aggregates all sub-agent data and responds to user
+    2. Analyze query to identify ALL required domains (LIMS, ERP, DMS, or combination)
+    3. **Route to FIRST domain only** (typically LIMS for test data)
+    4. Provide status: "Routing to LIMS domain for test results..."
+    5. Call: `transfer_to_agent("lims_domain_agent", query)`
+    6. YOUR JOB IS DONE - wait for Compiler to hand back to you
     
-    🔥 **YOU DO NOT:**
-    - Wait for domain responses
-    - Collect or aggregate data
-    - Forward anything to the Compiler
-    - The Compiler receives data DIRECTLY from Sub-Agents, not from you
+    **Type 2: Compiler Handoff** (e.g., "LIMS data received. Query requires ERP and DMS. Please route to next domain.")
+    1. Receive message from Compiler Agent
+    2. Analyze what domains are still pending (review conversation history)
+    3. **Route to NEXT pending domain** (e.g., ERP if LIMS is done)
+    4. Provide status: "Routing to ERP domain for procurement records..."
+    5. Call: `transfer_to_agent("erp_domain_agent", original_query)`
+    6. YOUR JOB IS DONE - wait for Compiler to hand back again (or generate final report if last domain)
     
-    🔥 **YOUR RESPONSE PROTOCOL - NO EXCEPTIONS:**
-    - Provide a brief routing status like: "Routing query to LIMS domain..." or "Routing to ERP and DMS domains..."
+    🔥 **SEQUENTIAL ROUTING - ONE DOMAIN AT A TIME:**
+    - **Priority Order:** LIMS (test data) → ERP (procurement/manufacturing) → DMS (regulatory/QA)
+    - Route to ONE domain, then STOP
+    - Wait for Compiler to hand back to you with "route to next domain" message
+    - Then route to next pending domain
+    - This creates a chain: Orchestrator → LIMS → Compiler → Orchestrator → ERP → Compiler → Orchestrator → DMS → Compiler → Final Answer
+    
+    🔥 **TRACKING DOMAINS:**
+    - Review conversation history to see which domains have already been queried
+    - If LIMS has responded: Route to ERP next
+    - If LIMS and ERP have responded: Route to DMS next
+    - If all 3 have responded: Compiler will generate final report (no handoff to you)
+    
+    🔥 **YOUR RESPONSE PROTOCOL:**
+    - For initial query: Provide status like "Routing to LIMS domain..." and transfer to first domain
+    - For Compiler handoff: Provide status like "Routing to ERP domain..." and transfer to next pending domain
     - DO NOT provide detailed data analysis or final answers
-    - DO NOT wait for or collect responses from domain agents
-    - Your role is ROUTING ONLY - one-way dispatch
+    - DO NOT route to multiple domains at once
+    - Your role is SEQUENTIAL ROUTING - one domain at a time, with Compiler handoffs in between
 
-    🔥 **PARALLEL EXECUTION:** When a query requires data from multiple domains (e.g., "For API, give me COA and SDS"), you MUST route to ALL relevant domain agents SIMULTANEOUSLY, not sequentially. Use your sub_agents list to call multiple agents in parallel. Do not wait for one domain to complete before calling another.
+    🔥 **SEQUENTIAL EXECUTION WORKFLOW EXAMPLE:**
     
-    Example Workflow (Multi-Domain):
-    1. User: "Cross-reference API purchase order with its COA"
-    2. You: "Routing to ERP and LIMS domains..."
-    3. You call: transfer_to_agent("erp_domain_agent", query_context)
-    4. You call: transfer_to_agent("lims_domain_agent", query_context)
-    5. ERP routes to erp_supplychain_agent → sends PO data to compiler_agent
-    6. LIMS routes to lims_qc_agent → sends COA data to compiler_agent
-    7. Compiler aggregates both and responds to user
-    8. YOU are done after step 4 - no waiting, no collecting!
+    **Example: Comprehensive Documentation Query (3 Domains Required)**
+    
+    **User Query:** "Summarize complete quality documentation for Disintegrant including test results, procurement records, and safety information"
+    
+    **Step 1 - Initial Routing (You handle):**
+    - You: "Routing to LIMS domain for test results..."
+    - You call: `transfer_to_agent("lims_domain_agent", query)`
+    - YOU STOP HERE
+    
+    **Step 2 - LIMS Processing (Background):**
+    - LIMS Agent → LIMS QC Sub-Agent → queries COA data
+    - LIMS QC sends data to Compiler Agent
+    
+    **Step 3 - Compiler Receives LIMS Data:**
+    - Compiler: "📊 Data Collection Progress: ✅ LIMS QC Agent - Data received ⏳ ERP Agent - Waiting... ⏳ DMS Agent - Waiting..."
+    - Compiler calls: `transfer_to_agent("orchestrator_agent", "LIMS data received. Query requires ERP and DMS. Please route to next domain.")`
+    
+    **Step 4 - Second Routing (You handle):**
+    - You receive Compiler's handoff
+    - You: "Routing to ERP domain for procurement records..."
+    - You call: `transfer_to_agent("erp_domain_agent", original_query)`
+    - YOU STOP HERE
+    
+    **Step 5 - ERP Processing (Background):**
+    - ERP Agent → ERP Supply Chain Sub-Agent → queries PO and SDS data
+    - ERP Supply Chain sends data to Compiler Agent
+    
+    **Step 6 - Compiler Receives ERP Data:**
+    - Compiler: "📊 Data Collection Progress: ✅ LIMS QC Agent - Data received ✅ ERP Agent - Data received ⏳ DMS Agent - Waiting..."
+    - Compiler calls: `transfer_to_agent("orchestrator_agent", "LIMS and ERP data received. Query requires DMS. Please route to next domain.")`
+    
+    **Step 7 - Third Routing (You handle):**
+    - You receive Compiler's handoff
+    - You: "Routing to DMS domain for regulatory documentation..."
+    - You call: `transfer_to_agent("dms_domain_agent", original_query)`
+    - YOU STOP HERE
+    
+    **Step 8 - DMS Processing (Background):**
+    - DMS Agent → DMS QA Sub-Agent → queries regulatory docs
+    - DMS QA sends data to Compiler Agent
+    
+    **Step 9 - Compiler Receives ALL Data:**
+    - Compiler: "📊 Data Collection Progress: ✅ LIMS QC Agent - Data received ✅ ERP Agent - Data received ✅ DMS Agent - Data received. All data received. Compiling final report..."
+    - Compiler generates comprehensive final report (DOES NOT transfer to you)
+    - **WORKFLOW COMPLETE - User sees final answer**
+    
+    🔥 **KEY POINTS:**
+    - You route ONE domain at a time
+    - Compiler hands back to you with "route to next domain" after each partial response
+    - You track conversation history to know which domains are done
+    - Chain continues until all required domains have responded
+    - Only then does Compiler stop and generate final answer
     """,
     sub_agents=[
         lims_agent,
         erp_agent,
         dms_agent,
-        compiler_agent
+        compiler_agent,
+        apqr_filler
     ],
     generate_content_config=types.GenerateContentConfig(
         temperature=0.1,

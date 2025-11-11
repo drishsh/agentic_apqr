@@ -1,0 +1,4264 @@
+{
+  "batches": {
+    "Batch_1": {
+      "batch_id": "Batch_1",
+      "product": "Aspirin Tablets 325mg",
+      "manufacturing_data": {},
+      "qc_data": {
+        "coa_data": [
+          {
+            "file": "COA_Binder.pdf",
+            "material": "Binder",
+            "tests": [],
+            "assay": "98.0%",
+            "lod": "5.0%",
+            "vendor_batch": "HPMC20241218"
+          },
+          {
+            "file": "COA_Filler.pdf",
+            "material": "Filler",
+            "tests": [],
+            "assay": "97.0%"
+          },
+          {
+            "file": "COA_Disintegrant.pdf",
+            "material": "Disintegrant",
+            "tests": [],
+            "lod": "12.0%",
+            "vendor_batch": "CS20250304"
+          },
+          {
+            "file": "COA_Lubricant.pdf",
+            "material": "Lubricant",
+            "tests": [],
+            "assay": "4.0%",
+            "lod": "6.0%"
+          },
+          {
+            "file": "COA_API.pdf",
+            "material": "API",
+            "tests": [],
+            "assay": "99.0%",
+            "lod": "0.5 %",
+            "vendor_batch": "SA20250127"
+          }
+        ],
+        "ipqc_results": [],
+        "material_testing": []
+      },
+      "yields": {
+        "compression": {
+          "percentage": "99.73%",
+          "input_weight": "111.250 kg",
+          "output_weight": "110.950 kg"
+        },
+        "blending": {},
+        "packaging": {}
+      },
+      "materials": [],
+      "dates": {
+        "manufacturing": "18-Feb-2025"
+      },
+      "personnel": {},
+      "batch_number": "ASP-25-001",
+      "total_tablets": "249,850"
+    },
+    "Batch_2": {
+      "batch_id": "Batch_2",
+      "product": "Aspirin Tablets 325mg",
+      "manufacturing_data": {},
+      "qc_data": {
+        "coa_data": [],
+        "ipqc_results": [
+          {
+            "file": "COA_Cornstarch_NovaThera_Final.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Cornstarch",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-CS-005",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "CS20250405",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-CS-0568",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "7-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "8-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless, free-flowing powder",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% suspension)",
+                  "Unnamed: 1": "4.0 - 7.0",
+                  "Unnamed: 2": "5.8",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 12.0%",
+                  "Unnamed: 2": "10.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density (Tapped)",
+                  "Unnamed: 1": "0.50 - 0.80 g/mL",
+                  "Unnamed: 2": "0.62 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Amit Bhardwaj (QC Analyst)",
+                  "Unnamed: 2": "A. Bhardwaj",
+                  "Unnamed: 3": "8-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Swati Khanna (QC Reviewer)",
+                  "Unnamed: 2": "S. Khanna",
+                  "Unnamed: 3": "8-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Mr. Rajesh Ahuja (QA Executive)",
+                  "Unnamed: 2": "R. Ahuja",
+                  "Unnamed: 3": "9-Mar-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/COA_Cornstarch_NovaThera_Final.xlsx"
+            }
+          },
+          {
+            "file": "COA_Salicylic_Acid_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Salicylic Acid",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-SA-001",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "SA20250228",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-SA-2402",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "2-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "3-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White powder or crystals",
+                  "Unnamed: 2": "White crystalline powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Melting Point",
+                  "Unnamed: 1": "158 - 161 \u00b0C",
+                  "Unnamed: 2": "159.5 \u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to structure",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (HPLC)",
+                  "Unnamed: 1": "98.5% - 101.0%",
+                  "Unnamed: 2": "99.9%",
+                  "Unnamed: 3": "HPLC"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.2%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.05%",
+                  "Unnamed: 2": "< 0.05%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "5% in absolute ethanol: clear, colorless",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "3-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "3-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "5-Mar-2025"
+                }
+              ],
+              "row_count": 36,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/COA_Salicylic_Acid_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_Magnesium_Stearate_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Magnesium Stearate",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MG-003",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Thermo-Fisher Scientific",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MG20220225",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MS-0653",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "11-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "12-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "Fine, white, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Melting Range",
+                  "Unnamed: 1": "130\u00b0C - 140\u00b0C",
+                  "Unnamed: 2": "134.5\u00b0C - 137.2\u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Mg Content, Dry Basis)",
+                  "Unnamed: 1": "4.0% - 5.0%",
+                  "Unnamed: 2": "4.4%",
+                  "Unnamed: 3": "Complexometric Titration"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 6.0%",
+                  "Unnamed: 2": "2.9%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.15 - 0.30 g/mL",
+                  "Unnamed: 2": "0.21 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "12-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "12-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "13-Mar-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/COA_Magnesium_Stearate_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_MCC_NovaTheral.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "MCC PH 101",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MC-002",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "DC Fine Chemicals",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MC20250213",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MC-0892",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "9-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "10-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% Suspension)",
+                  "Unnamed: 1": "5.0 - 7.5",
+                  "Unnamed: 2": "6.4",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Dry Basis)",
+                  "Unnamed: 1": "Not Less Than 97.0%",
+                  "Unnamed: 2": "98.9%",
+                  "Unnamed: 3": "In-house Gravimetric"
+                },
+                {
+                  "Certificate of Analysis": "Water Content",
+                  "Unnamed: 1": "Not More Than 7.0%",
+                  "Unnamed: 2": "3.8%",
+                  "Unnamed: 3": "USP <921>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.1%",
+                  "Unnamed: 2": "0.04%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.25 - 0.40 g/mL",
+                  "Unnamed: 2": "0.33 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "10-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. K. Pillai (QC Supervisor)",
+                  "Unnamed: 2": "K. Pillai",
+                  "Unnamed: 3": "10-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "11-Mar-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/COA_MCC_NovaTheral.xlsx"
+            }
+          },
+          {
+            "file": "COA_HPMC_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "HPMC",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-HPMC-004",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "HPMC20250219",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-HPMC-0790",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "5-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "6-Mar-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White to light-colored powder",
+                  "Unnamed: 2": "White to egg-white powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "Swells in hot water, insoluble in cold water",
+                  "Unnamed: 2": "Swells in hot water",
+                  "Unnamed: 3": "Internal Method"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to standard spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 5.0%",
+                  "Unnamed: 2": "2.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% solution)",
+                  "Unnamed: 1": "5.0 - 8.0",
+                  "Unnamed: 2": "6.1",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Viscosity (2% solution, 20\u00b0C)",
+                  "Unnamed: 1": "100 - 150 mPa\u00b7s",
+                  "Unnamed: 2": "135 mPa\u00b7s",
+                  "Unnamed: 3": "USP <912> / In-house"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 1.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total count NMT 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "6-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Ms. Devika Chauhan (QC Supervisor)",
+                  "Unnamed: 2": "D. Chauhan",
+                  "Unnamed: 3": "6-Mar-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "7-Mar-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/COA_HPMC_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "QC Report Register.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Field / Parameter",
+                "QC Reference ID",
+                "Date of Sampling",
+                "Sampled By",
+                "Batch Number",
+                "Material Code",
+                "Supplier Name",
+                "Date of Receipt",
+                "Sampling Location",
+                "Booth Cleanliness Ref.",
+                "QC Analyst",
+                "Pass / Fail",
+                "Disposition Decision"
+              ],
+              "data": [
+                {
+                  "Field / Parameter": "Salicylic Acid",
+                  "QC Reference ID": "QC-RM-25-002",
+                  "Date of Sampling": "3-Mar-25",
+                  "Sampled By": "Ms. A. Verma",
+                  "Batch Number": "SA20250228",
+                  "Material Code": "RM-SA-001",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "2-Mar-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/005",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "HPMC",
+                  "QC Reference ID": "QC-RM-25-002",
+                  "Date of Sampling": "6-Mar-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "HPMC20250219",
+                  "Material Code": "RM-HPMC-004",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "5-Mar-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/008",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Cornstarch",
+                  "QC Reference ID": "QC-RM-25-002",
+                  "Date of Sampling": "8-Mar-25",
+                  "Sampled By": "Ramesh Pawar",
+                  "Batch Number": "CS20250405",
+                  "Material Code": "RM-CS-005",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "7-Mar-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/010",
+                  "QC Analyst": "A. Bhardwaj",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "MCC PH 101",
+                  "QC Reference ID": "QC-RM-25-002",
+                  "Date of Sampling": "10-Mar-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MC20250213",
+                  "Material Code": "RM-MC-002",
+                  "Supplier Name": "DC Fine Chemicals",
+                  "Date of Receipt": "9-Mar-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/012",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Magnesium Stearate",
+                  "QC Reference ID": "QC-RM-25-002",
+                  "Date of Sampling": "12-Mar-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MG20220225",
+                  "Material Code": "RM-MG-003",
+                  "Supplier Name": "Thermo-Fisher Scientific",
+                  "Date of Receipt": "11-Mar-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/014",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                }
+              ],
+              "row_count": 5,
+              "column_count": 13,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_February_March_Batch_2/04. Internal QC Register & COA/QC Report Register.xlsx"
+            }
+          }
+        ],
+        "material_testing": []
+      },
+      "yields": {
+        "compression": {
+          "input_weight": "111.250 kg",
+          "output_weight": "110.950 kg (245,998 Tablets)",
+          "percentage": "99.73% (110.950 / 111.250 * 100)",
+          "status": "PASS"
+        },
+        "blending": {},
+        "packaging": {}
+      },
+      "materials": [],
+      "dates": {
+        "compression_reconciliation": "18-Mar-2025"
+      },
+      "personnel": {},
+      "batch_number": "ASP-25-002"
+    },
+    "Batch_3": {
+      "batch_id": "Batch_3",
+      "product": "Aspirin Tablets 325mg",
+      "manufacturing_data": {},
+      "qc_data": {
+        "coa_data": [],
+        "ipqc_results": [
+          {
+            "file": "COA_Cornstarch_NovaThera_Final.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Cornstarch",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-CS-005",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "CS20250506",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-CS-0569",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "7-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "8-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless, free-flowing powder",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% suspension)",
+                  "Unnamed: 1": "4.0 - 7.0",
+                  "Unnamed: 2": "5.8",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 12.0%",
+                  "Unnamed: 2": "10.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density (Tapped)",
+                  "Unnamed: 1": "0.50 - 0.80 g/mL",
+                  "Unnamed: 2": "0.62 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Amit Bhardwaj (QC Analyst)",
+                  "Unnamed: 2": "A. Bhardwaj",
+                  "Unnamed: 3": "8-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Swati Khanna (QC Reviewer)",
+                  "Unnamed: 2": "S. Khanna",
+                  "Unnamed: 3": "8-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Mr. Rajesh Ahuja (QA Executive)",
+                  "Unnamed: 2": "R. Ahuja",
+                  "Unnamed: 3": "9-Apr-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/COA_Cornstarch_NovaThera_Final.xlsx"
+            }
+          },
+          {
+            "file": "COA_Salicylic_Acid_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Salicylic Acid",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-SA-001",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "SA20250329",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-SA-2403",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "2-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "3-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White powder or crystals",
+                  "Unnamed: 2": "White crystalline powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Melting Point",
+                  "Unnamed: 1": "158 - 161 \u00b0C",
+                  "Unnamed: 2": "159.5 \u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to structure",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (HPLC)",
+                  "Unnamed: 1": "98.5% - 101.0%",
+                  "Unnamed: 2": "99.9%",
+                  "Unnamed: 3": "HPLC"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.2%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.05%",
+                  "Unnamed: 2": "< 0.05%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "5% in absolute ethanol: clear, colorless",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "3-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "3-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "5-Apr-2025"
+                }
+              ],
+              "row_count": 36,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/COA_Salicylic_Acid_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_Magnesium_Stearate_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Magnesium Stearate",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MG-003",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Thermo-Fisher Scientific",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MG20229226",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MS-0654",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "11-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "12-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "Fine, white, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Melting Range",
+                  "Unnamed: 1": "130\u00b0C - 140\u00b0C",
+                  "Unnamed: 2": "134.5\u00b0C - 137.2\u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Mg Content, Dry Basis)",
+                  "Unnamed: 1": "4.0% - 5.0%",
+                  "Unnamed: 2": "4.4%",
+                  "Unnamed: 3": "Complexometric Titration"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 6.0%",
+                  "Unnamed: 2": "2.9%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.15 - 0.30 g/mL",
+                  "Unnamed: 2": "0.21 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "12-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "12-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "13-Apr-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/COA_Magnesium_Stearate_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_MCC_NovaTheral.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "MCC PH 101",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MC-002",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "DC Fine Chemicals",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MC20250314",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MC-0893",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "9-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "10-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% Suspension)",
+                  "Unnamed: 1": "5.0 - 7.5",
+                  "Unnamed: 2": "6.4",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Dry Basis)",
+                  "Unnamed: 1": "Not Less Than 97.0%",
+                  "Unnamed: 2": "98.9%",
+                  "Unnamed: 3": "In-house Gravimetric"
+                },
+                {
+                  "Certificate of Analysis": "Water Content",
+                  "Unnamed: 1": "Not More Than 7.0%",
+                  "Unnamed: 2": "3.8%",
+                  "Unnamed: 3": "USP <921>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.1%",
+                  "Unnamed: 2": "0.04%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.25 - 0.40 g/mL",
+                  "Unnamed: 2": "0.33 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "10-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. K. Pillai (QC Supervisor)",
+                  "Unnamed: 2": "K. Pillai",
+                  "Unnamed: 3": "10-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "11-Apr-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/COA_MCC_NovaTheral.xlsx"
+            }
+          },
+          {
+            "file": "COA_HPMC_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "HPMC",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-HPMC-004",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "HPMC20259220",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-HPMC-0791",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "5-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "6-Apr-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White to light-colored powder",
+                  "Unnamed: 2": "White to egg-white powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "Swells in hot water, insoluble in cold water",
+                  "Unnamed: 2": "Swells in hot water",
+                  "Unnamed: 3": "Internal Method"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to standard spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 5.0%",
+                  "Unnamed: 2": "2.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% solution)",
+                  "Unnamed: 1": "5.0 - 8.0",
+                  "Unnamed: 2": "6.1",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Viscosity (2% solution, 20\u00b0C)",
+                  "Unnamed: 1": "100 - 150 mPa\u00b7s",
+                  "Unnamed: 2": "135 mPa\u00b7s",
+                  "Unnamed: 3": "USP <912> / In-house"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 1.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total count NMT 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "6-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Ms. Devika Chauhan (QC Supervisor)",
+                  "Unnamed: 2": "D. Chauhan",
+                  "Unnamed: 3": "6-Apr-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "7-Apr-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/COA_HPMC_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "QC Report Register.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Field / Parameter",
+                "QC Reference ID",
+                "Date of Sampling",
+                "Sampled By",
+                "Batch Number",
+                "Material Code",
+                "Supplier Name",
+                "Date of Receipt",
+                "Sampling Location",
+                "Booth Cleanliness Ref.",
+                "QC Analyst",
+                "Pass / Fail",
+                "Disposition Decision"
+              ],
+              "data": [
+                {
+                  "Field / Parameter": "Salicylic Acid",
+                  "QC Reference ID": "QC-RM-25-003",
+                  "Date of Sampling": "3-Apr-25",
+                  "Sampled By": "Ms. A. Verma",
+                  "Batch Number": "SA20250329",
+                  "Material Code": "RM-SA-001",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "2-Apr-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/005",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "HPMC",
+                  "QC Reference ID": "QC-RM-25-003",
+                  "Date of Sampling": "6-Apr-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "HPMC20259220",
+                  "Material Code": "RM-HPMC-004",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "5-Apr-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/008",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Cornstarch",
+                  "QC Reference ID": "QC-RM-25-003",
+                  "Date of Sampling": "8-Apr-25",
+                  "Sampled By": "Ramesh Pawar",
+                  "Batch Number": "CS20250506",
+                  "Material Code": "RM-CS-005",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "7-Apr-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/010",
+                  "QC Analyst": "A. Bhardwaj",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "MCC PH 101",
+                  "QC Reference ID": "QC-RM-25-003",
+                  "Date of Sampling": "10-Apr-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MC20250314",
+                  "Material Code": "RM-MC-002",
+                  "Supplier Name": "DC Fine Chemicals",
+                  "Date of Receipt": "9-Apr-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/012",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Magnesium Stearate",
+                  "QC Reference ID": "QC-RM-25-003",
+                  "Date of Sampling": "12-Apr-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MG20229226",
+                  "Material Code": "RM-MG-003",
+                  "Supplier Name": "Thermo-Fisher Scientific",
+                  "Date of Receipt": "11-Apr-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/014",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                }
+              ],
+              "row_count": 5,
+              "column_count": 13,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_March_April_Batch_3/04. Internal QC Register & COA/QC Report Register.xlsx"
+            }
+          }
+        ],
+        "material_testing": []
+      },
+      "yields": {
+        "compression": {
+          "input_weight": "111.250 kg",
+          "output_weight": "110.950 kg (245,998 Tablets)",
+          "percentage": "99.73% (110.950 / 111.250 * 100)",
+          "status": "PASS"
+        },
+        "blending": {},
+        "packaging": {}
+      },
+      "materials": [],
+      "dates": {
+        "compression_reconciliation": "18-Apr-2025"
+      },
+      "personnel": {},
+      "batch_number": "ASP-25-003"
+    },
+    "Batch_4": {
+      "batch_id": "Batch_4",
+      "product": "Aspirin Tablets 325mg",
+      "manufacturing_data": {},
+      "qc_data": {
+        "coa_data": [],
+        "ipqc_results": [
+          {
+            "file": "COA_Cornstarch_NovaThera_Final.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Cornstarch",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-CS-005",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "CS20250607",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-CS-0570",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "7-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "8-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless, free-flowing powder",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% suspension)",
+                  "Unnamed: 1": "4.0 - 7.0",
+                  "Unnamed: 2": "5.8",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 12.0%",
+                  "Unnamed: 2": "10.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density (Tapped)",
+                  "Unnamed: 1": "0.50 - 0.80 g/mL",
+                  "Unnamed: 2": "0.62 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Amit Bhardwaj (QC Analyst)",
+                  "Unnamed: 2": "A. Bhardwaj",
+                  "Unnamed: 3": "8-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Swati Khanna (QC Reviewer)",
+                  "Unnamed: 2": "S. Khanna",
+                  "Unnamed: 3": "8-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Mr. Rajesh Ahuja (QA Executive)",
+                  "Unnamed: 2": "R. Ahuja",
+                  "Unnamed: 3": "9-May-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/COA_Cornstarch_NovaThera_Final.xlsx"
+            }
+          },
+          {
+            "file": "COA_Salicylic_Acid_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Salicylic Acid",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-SA-001",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "SA20250430",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-SA-2404",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "2-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "3-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White powder or crystals",
+                  "Unnamed: 2": "White crystalline powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Melting Point",
+                  "Unnamed: 1": "158 - 161 \u00b0C",
+                  "Unnamed: 2": "159.5 \u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to structure",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (HPLC)",
+                  "Unnamed: 1": "98.5% - 101.0%",
+                  "Unnamed: 2": "99.9%",
+                  "Unnamed: 3": "HPLC"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 0.5%",
+                  "Unnamed: 2": "0.2%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.05%",
+                  "Unnamed: 2": "< 0.05%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "5% in absolute ethanol: clear, colorless",
+                  "Unnamed: 2": "Complies",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "3-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "3-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "5-May-2025"
+                }
+              ],
+              "row_count": 36,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/COA_Salicylic_Acid_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_Magnesium_Stearate_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "Magnesium Stearate",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MG-003",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Thermo-Fisher Scientific",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MG20238227",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MS-0655",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "11-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "12-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "Fine, white, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Melting Range",
+                  "Unnamed: 1": "130\u00b0C - 140\u00b0C",
+                  "Unnamed: 2": "134.5\u00b0C - 137.2\u00b0C",
+                  "Unnamed: 3": "USP <741>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Mg Content, Dry Basis)",
+                  "Unnamed: 1": "4.0% - 5.0%",
+                  "Unnamed: 2": "4.4%",
+                  "Unnamed: 3": "Complexometric Titration"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 6.0%",
+                  "Unnamed: 2": "2.9%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.15 - 0.30 g/mL",
+                  "Unnamed: 2": "0.21 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. A. Verma (QC Analyst)",
+                  "Unnamed: 2": "A. Verma",
+                  "Unnamed: 3": "12-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. N. Kaul (QC Supervisor)",
+                  "Unnamed: 2": "N. Kaul",
+                  "Unnamed: 3": "12-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. A. Mehra (QC Manager)",
+                  "Unnamed: 2": "A. Mehra",
+                  "Unnamed: 3": "13-May-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/COA_Magnesium_Stearate_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "COA_MCC_NovaTheral.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "MCC PH 101",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-MC-002",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "DC Fine Chemicals",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "MC20250415",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-MC-0894",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "9-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "10-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White, odorless powder",
+                  "Unnamed: 2": "White, odorless powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Identification (IR)",
+                  "Unnamed: 1": "Conforms to reference spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% Suspension)",
+                  "Unnamed: 1": "5.0 - 7.5",
+                  "Unnamed: 2": "6.4",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Assay (Dry Basis)",
+                  "Unnamed: 1": "Not Less Than 97.0%",
+                  "Unnamed: 2": "98.9%",
+                  "Unnamed: 3": "In-house Gravimetric"
+                },
+                {
+                  "Certificate of Analysis": "Water Content",
+                  "Unnamed: 1": "Not More Than 7.0%",
+                  "Unnamed: 2": "3.8%",
+                  "Unnamed: 3": "USP <921>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 0.1%",
+                  "Unnamed: 2": "0.04%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Bulk Density",
+                  "Unnamed: 1": "0.25 - 0.40 g/mL",
+                  "Unnamed: 2": "0.33 g/mL",
+                  "Unnamed: 3": "In-house SOP"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total Aerobic Count <= 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": "Total Yeast & Mold <= 100 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "10-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Mr. K. Pillai (QC Supervisor)",
+                  "Unnamed: 2": "K. Pillai",
+                  "Unnamed: 3": "10-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "11-May-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/COA_MCC_NovaTheral.xlsx"
+            }
+          },
+          {
+            "file": "COA_HPMC_NovaThera.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Certificate of Analysis",
+                "Unnamed: 1",
+                "Unnamed: 2",
+                "Unnamed: 3"
+              ],
+              "data": [
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Product Details",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Name:",
+                  "Unnamed: 1": "HPMC",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Material Code:",
+                  "Unnamed: 1": "RM-HPMC-004",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Name:",
+                  "Unnamed: 1": "Sigma-Aldrich",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Supplier Batch/Lot No.:",
+                  "Unnamed: 1": "HPMC20268221",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "GRN Number:",
+                  "Unnamed: 1": "GRN-HPMC-0792",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Date of Receipt:",
+                  "Unnamed: 1": "5-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampling Date:",
+                  "Unnamed: 1": "6-May-2025",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Sampled By:",
+                  "Unnamed: 1": "Ms. R. Banerjee (QA Executive)",
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Test Specifications and Results",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "param",
+                  "Unnamed: 1": "spec",
+                  "Unnamed: 2": "result",
+                  "Unnamed: 3": "method"
+                },
+                {
+                  "Certificate of Analysis": "Appearance",
+                  "Unnamed: 1": "White to light-colored powder",
+                  "Unnamed: 2": "White to egg-white powder",
+                  "Unnamed: 3": "Visual Inspection"
+                },
+                {
+                  "Certificate of Analysis": "Solubility",
+                  "Unnamed: 1": "Swells in hot water, insoluble in cold water",
+                  "Unnamed: 2": "Swells in hot water",
+                  "Unnamed: 3": "Internal Method"
+                },
+                {
+                  "Certificate of Analysis": "Identification (FTIR)",
+                  "Unnamed: 1": "Conforms to standard spectrum",
+                  "Unnamed: 2": "Conforms",
+                  "Unnamed: 3": "USP <197>"
+                },
+                {
+                  "Certificate of Analysis": "Loss on Drying",
+                  "Unnamed: 1": "Not More Than 5.0%",
+                  "Unnamed: 2": "2.8%",
+                  "Unnamed: 3": "USP <731>"
+                },
+                {
+                  "Certificate of Analysis": "pH (1% solution)",
+                  "Unnamed: 1": "5.0 - 8.0",
+                  "Unnamed: 2": "6.1",
+                  "Unnamed: 3": "USP <791>"
+                },
+                {
+                  "Certificate of Analysis": "Viscosity (2% solution, 20\u00b0C)",
+                  "Unnamed: 1": "100 - 150 mPa\u00b7s",
+                  "Unnamed: 2": "135 mPa\u00b7s",
+                  "Unnamed: 3": "USP <912> / In-house"
+                },
+                {
+                  "Certificate of Analysis": "Heavy Metals",
+                  "Unnamed: 1": "Not More Than 10 ppm",
+                  "Unnamed: 2": "< 10 ppm",
+                  "Unnamed: 3": "USP <231>"
+                },
+                {
+                  "Certificate of Analysis": "Residue on Ignition",
+                  "Unnamed: 1": "Not More Than 1.5%",
+                  "Unnamed: 2": "0.3%",
+                  "Unnamed: 3": "USP <281>"
+                },
+                {
+                  "Certificate of Analysis": "Microbial Limits",
+                  "Unnamed: 1": "Total count NMT 1000 CFU/g",
+                  "Unnamed: 2": "Within Limits",
+                  "Unnamed: 3": "USP <61>, <62>"
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Conclusion",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "All tested parameters conform to the established specifications.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "QC Status: COMPLIES",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Disposition: The material is APPROVED and RELEASED for transfer to the Raw Material Store.",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Authorization",
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": NaN,
+                  "Unnamed: 1": NaN,
+                  "Unnamed: 2": NaN,
+                  "Unnamed: 3": NaN
+                },
+                {
+                  "Certificate of Analysis": "Action",
+                  "Unnamed: 1": "Name & Title",
+                  "Unnamed: 2": "Signature",
+                  "Unnamed: 3": "Date"
+                },
+                {
+                  "Certificate of Analysis": "Analysis Performed By:",
+                  "Unnamed: 1": "Ms. P. Sharma (QC Analyst)",
+                  "Unnamed: 2": "P. Sharma",
+                  "Unnamed: 3": "6-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Data Reviewed By:",
+                  "Unnamed: 1": "Ms. Devika Chauhan (QC Supervisor)",
+                  "Unnamed: 2": "D. Chauhan",
+                  "Unnamed: 3": "6-May-2025"
+                },
+                {
+                  "Certificate of Analysis": "Approved & Released By:",
+                  "Unnamed: 1": "Dr. M. Santosh (QC Manager)",
+                  "Unnamed: 2": "M. Santosh",
+                  "Unnamed: 3": "7-May-2025"
+                }
+              ],
+              "row_count": 37,
+              "column_count": 4,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/COA_HPMC_NovaThera.xlsx"
+            }
+          },
+          {
+            "file": "QC Report Register.xlsx",
+            "data": {
+              "sheet": "default",
+              "columns": [
+                "Field / Parameter",
+                "QC Reference ID",
+                "Date of Sampling",
+                "Sampled By",
+                "Batch Number",
+                "Material Code",
+                "Supplier Name",
+                "Date of Receipt",
+                "Sampling Location",
+                "Booth Cleanliness Ref.",
+                "QC Analyst",
+                "Pass / Fail",
+                "Disposition Decision"
+              ],
+              "data": [
+                {
+                  "Field / Parameter": "Salicylic Acid",
+                  "QC Reference ID": "QC-RM-25-004",
+                  "Date of Sampling": "3-May-25",
+                  "Sampled By": "Ms. A. Verma",
+                  "Batch Number": "SA20250430",
+                  "Material Code": "RM-SA-001",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "2-May-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/005",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "HPMC",
+                  "QC Reference ID": "QC-RM-25-004",
+                  "Date of Sampling": "6-May-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "HPMC20268221",
+                  "Material Code": "RM-HPMC-004",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "5-May-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/008",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Cornstarch",
+                  "QC Reference ID": "QC-RM-25-004",
+                  "Date of Sampling": "8-May-25",
+                  "Sampled By": "Ramesh Pawar",
+                  "Batch Number": "CS20250607",
+                  "Material Code": "RM-CS-005",
+                  "Supplier Name": "Sigma-Aldrich",
+                  "Date of Receipt": "7-May-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/010",
+                  "QC Analyst": "A. Bhardwaj",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "MCC PH 101",
+                  "QC Reference ID": "QC-RM-25-004",
+                  "Date of Sampling": "10-May-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MC20250415",
+                  "Material Code": "RM-MC-002",
+                  "Supplier Name": "DC Fine Chemicals",
+                  "Date of Receipt": "9-May-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/012",
+                  "QC Analyst": "P. Sharma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                },
+                {
+                  "Field / Parameter": "Magnesium Stearate",
+                  "QC Reference ID": "QC-RM-25-004",
+                  "Date of Sampling": "12-May-25",
+                  "Sampled By": "Ms. R. Banerjee",
+                  "Batch Number": "MG20238227",
+                  "Material Code": "RM-MG-003",
+                  "Supplier Name": "Thermo-Fisher Scientific",
+                  "Date of Receipt": "11-May-25",
+                  "Sampling Location": "SB-01",
+                  "Booth Cleanliness Ref.": "CLN/SB01/25/014",
+                  "QC Analyst": "A. Verma",
+                  "Pass / Fail": "Pass",
+                  "Disposition Decision": "Approved"
+                }
+              ],
+              "row_count": 5,
+              "column_count": 13,
+              "source": "/Users/shtlpmac019/Library/CloudStorage/OneDrive-ShortHillsTechPvtLtd/Desktop/AGENTS/AGENT/agentic_apqr/APQR_Segregated/LIMS/Batch_April_May_Batch_4/04. Internal QC Register & COA/QC Report Register.xlsx"
+            }
+          }
+        ],
+        "material_testing": []
+      },
+      "yields": {
+        "compression": {
+          "input_weight": "111.250 kg",
+          "output_weight": "110.950 kg (245,998 Tablets)",
+          "percentage": "99.73% (110.950 / 111.250 * 100)",
+          "status": "PASS"
+        },
+        "blending": {},
+        "packaging": {}
+      },
+      "materials": [],
+      "dates": {
+        "compression_reconciliation": "18-May-2025"
+      },
+      "personnel": {},
+      "batch_number": "ASP-25-004"
+    }
+  },
+  "deviations": [
+    {
+      "deviation_id": "DEV/PKG/2025/046",
+      "qa_inv_id": "QA/INV/2025/046",
+      "capa_id": "QA/CAPA/2025/046",
+      "deviation_details": {
+        "batch": "ASP-25-004",
+        "product": "Aspirin Tablets 325 mg",
+        "stage": "Secondary Packaging (Cartoning)",
+        "date_occurred": "23-May-2025",
+        "time_detected": "11:30 AM",
+        "detected_by": "Amit Sharma (Packaging Supervisor)",
+        "reported_to": "Meena Iyer (QA Executive)",
+        "classification": "Critical Deviation \u2013 Label Misprint",
+        "description": "Cartons printed with incorrect strength '650 mg' instead of '325 mg'",
+        "affected_units": "60 cartons out of 8,205",
+        "immediate_action": "Operation immediately stopped, affected materials segregated and quarantined under QA supervision",
+        "location": "Packaging Suite P-101"
+      },
+      "root_cause_analysis": {
+        "investigation_date": "25-May-2025",
+        "investigated_by": "Cross-functional team (QA, Production, Maintenance)",
+        "methodology": "Structured GMP approach",
+        "root_cause": "Operator selected incorrect label template due to oversight. Absence of system-level lockout and missed second-person verification allowed wrong template selection.",
+        "contributing_factors": [
+          "No system lockout for template selection",
+          "Missed second-person verification",
+          "Manual template selection process"
+        ]
+      },
+      "corrective_actions": {
+        "immediate": [
+          {
+            "action": "Segregation and destruction of 60 misprinted cartons",
+            "date": "24-May-2025",
+            "responsible": "Production / QA",
+            "status": "Completed",
+            "verification": "Photographic evidence and destruction log attached (QA/DEST/2025/045)"
+          },
+          {
+            "action": "Reprinting of replacement cartons",
+            "date": "24-May-2025",
+            "responsible": "Production",
+            "status": "Completed",
+            "verification": "Verified by QA prior to restart"
+          }
+        ],
+        "systemic": [
+          {
+            "action": "System-level lockout for label template control",
+            "status": "Implemented"
+          },
+          {
+            "action": "Revised SOP for label printing and verification (PKG-SOP-014, Rev.02)",
+            "status": "Implemented"
+          },
+          {
+            "action": "Mandatory second-person verification checkpoint",
+            "status": "Implemented"
+          }
+        ]
+      },
+      "preventive_actions": [
+        "Operator retraining on revised SOP",
+        "System lockout implementation",
+        "Enhanced QA-Production verification checkpoints"
+      ],
+      "training": {
+        "training_no": "TRN/PKG/2025/014",
+        "topic": "Revised Label Printing and Verification SOP (PKG-SOP-014, Rev.02)",
+        "date": "20-May-2025",
+        "trainer": "Pooja Gupta (QA Head)",
+        "attendees": 5,
+        "outcome": "All attendees understood revised procedure; competency verified"
+      },
+      "effectiveness_verification": {
+        "period": "24-May-2025 to 31-Jul-2025",
+        "verification_method": "Post-CAPA verification across two consecutive batches",
+        "result": "Zero recurrence confirmed",
+        "verified_by": "Neha Gupta (QA Executive)"
+      },
+      "management_review": {
+        "review_date": "05-Aug-2025",
+        "presented_by": "Sanjay Reddy (QA Manager)",
+        "attendees": [
+          "Mr. Arun Sharma \u2013 Plant Head",
+          "Mr. Amit Sharma \u2013 Production Head",
+          "Ms. Neha Gupta \u2013 QA Executive",
+          "Mr. Sanjay Reddy \u2013 QA Manager",
+          "Mr. Rajeev Tiwari \u2013 Engineering Head"
+        ],
+        "conclusion": "All CAPA actions completed within timelines. No product released with incorrect labeling. Process improvements verified effective."
+      },
+      "impact_assessment": {
+        "product_quality": "No impact - all affected units contained and destroyed",
+        "market_release": "None - no affected material released",
+        "regulatory": "Incident contained; no regulatory reporting required",
+        "batch_disposition": "Batch ASP-25-004 released after verification of corrective actions"
+      }
+    }
+  ],
+  "training_records": [],
+  "sops": [],
+  "materials": [
+    {
+      "name": "Salicylic Acid",
+      "code": "RM-SA-001",
+      "group": "API",
+      "vendor": "Sigma-Aldrich",
+      "vendor_code": "VDR-1023",
+      "required_weight": 81.25
+    },
+    {
+      "name": "(Hydroxypropyl)methyl cellulose (HPMC)",
+      "code": "RM-HPMC-004",
+      "group": "Binder",
+      "vendor": "Sigma-Aldrich",
+      "vendor_code": "VDR-1587",
+      "required_weight": 3.75
+    },
+    {
+      "name": "Cornstarch",
+      "code": "RM-CS-005",
+      "group": "Disintegrant",
+      "vendor": "Sigma-Aldrich",
+      "vendor_code": "VDR-1598",
+      "required_weight": 6.25
+    },
+    {
+      "name": "Microcrystalline Cellulose (PH 101)",
+      "code": "RM-MC-002",
+      "group": "Filler",
+      "vendor": "DC Fine Chemicals",
+      "vendor_code": "VDR-1987",
+      "required_weight": 20.0
+    },
+    {
+      "name": "Magnesium Stearate",
+      "code": "RM-MG-003",
+      "group": "Lubricant",
+      "vendor": "Thermo-Fisher Scientific",
+      "vendor_code": "VDR-1454",
+      "required_weight": 1.25
+    }
+  ],
+  "capa_comprehensive": [
+    {
+      "deviation_id": "DEV/PKG/2025/046",
+      "qa_inv_id": "QA/INV/2025/046",
+      "capa_id": "QA/CAPA/2025/046",
+      "deviation_details": {
+        "batch": "ASP-25-004",
+        "product": "Aspirin Tablets 325 mg",
+        "stage": "Secondary Packaging (Cartoning)",
+        "date_occurred": "23-May-2025",
+        "time_detected": "11:30 AM",
+        "detected_by": "Amit Sharma (Packaging Supervisor)",
+        "reported_to": "Meena Iyer (QA Executive)",
+        "classification": "Critical Deviation \u2013 Label Misprint",
+        "description": "Cartons printed with incorrect strength '650 mg' instead of '325 mg'",
+        "affected_units": "60 cartons out of 8,205",
+        "immediate_action": "Operation immediately stopped, affected materials segregated and quarantined under QA supervision",
+        "location": "Packaging Suite P-101"
+      },
+      "root_cause_analysis": {
+        "investigation_date": "25-May-2025",
+        "investigated_by": "Cross-functional team (QA, Production, Maintenance)",
+        "methodology": "Structured GMP approach",
+        "root_cause": "Operator selected incorrect label template due to oversight. Absence of system-level lockout and missed second-person verification allowed wrong template selection.",
+        "contributing_factors": [
+          "No system lockout for template selection",
+          "Missed second-person verification",
+          "Manual template selection process"
+        ]
+      },
+      "corrective_actions": {
+        "immediate": [
+          {
+            "action": "Segregation and destruction of 60 misprinted cartons",
+            "date": "24-May-2025",
+            "responsible": "Production / QA",
+            "status": "Completed",
+            "verification": "Photographic evidence and destruction log attached (QA/DEST/2025/045)"
+          },
+          {
+            "action": "Reprinting of replacement cartons",
+            "date": "24-May-2025",
+            "responsible": "Production",
+            "status": "Completed",
+            "verification": "Verified by QA prior to restart"
+          }
+        ],
+        "systemic": [
+          {
+            "action": "System-level lockout for label template control",
+            "status": "Implemented"
+          },
+          {
+            "action": "Revised SOP for label printing and verification (PKG-SOP-014, Rev.02)",
+            "status": "Implemented"
+          },
+          {
+            "action": "Mandatory second-person verification checkpoint",
+            "status": "Implemented"
+          }
+        ]
+      },
+      "preventive_actions": [
+        "Operator retraining on revised SOP",
+        "System lockout implementation",
+        "Enhanced QA-Production verification checkpoints"
+      ],
+      "training": {
+        "training_no": "TRN/PKG/2025/014",
+        "topic": "Revised Label Printing and Verification SOP (PKG-SOP-014, Rev.02)",
+        "date": "20-May-2025",
+        "trainer": "Pooja Gupta (QA Head)",
+        "attendees": 5,
+        "outcome": "All attendees understood revised procedure; competency verified"
+      },
+      "effectiveness_verification": {
+        "period": "24-May-2025 to 31-Jul-2025",
+        "verification_method": "Post-CAPA verification across two consecutive batches",
+        "result": "Zero recurrence confirmed",
+        "verified_by": "Neha Gupta (QA Executive)"
+      },
+      "management_review": {
+        "review_date": "05-Aug-2025",
+        "presented_by": "Sanjay Reddy (QA Manager)",
+        "attendees": [
+          "Mr. Arun Sharma \u2013 Plant Head",
+          "Mr. Amit Sharma \u2013 Production Head",
+          "Ms. Neha Gupta \u2013 QA Executive",
+          "Mr. Sanjay Reddy \u2013 QA Manager",
+          "Mr. Rajeev Tiwari \u2013 Engineering Head"
+        ],
+        "conclusion": "All CAPA actions completed within timelines. No product released with incorrect labeling. Process improvements verified effective."
+      },
+      "impact_assessment": {
+        "product_quality": "No impact - all affected units contained and destroyed",
+        "market_release": "None - no affected material released",
+        "regulatory": "Incident contained; no regulatory reporting required",
+        "batch_disposition": "Batch ASP-25-004 released after verification of corrective actions"
+      }
+    }
+  ]
+}

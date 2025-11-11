@@ -12,6 +12,7 @@ Tools Architecture:
 import logging
 import os
 import json
+import re
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -243,7 +244,7 @@ def query_lims_validation(query: str) -> str:
 - Equipment qualification records
 - Method validation summaries
 
-**Documents Available:** {', '.join(available_docs)}
+**Documents Available:** {', '.join(str(doc) for doc in available_docs[:10])}...
 """
     
     return result
@@ -295,7 +296,7 @@ def query_lims_rnd(query: str) -> str:
 - Product development logs
 - CQA tracking and analysis
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc.name) for doc in available_docs[:10])}...
 
 **R&D Focus Areas:**
 - Stability testing and trending
@@ -373,7 +374,7 @@ def query_erp_manufacturing(query: str) -> str:
 - Yield reconciliation data
 - Manufacturing deviation logs
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc) for doc in available_docs[:10])}...
 """
     
     return result
@@ -425,7 +426,7 @@ def query_erp_engineering(query: str) -> str:
 - Equipment qualification status
 - Engineering change control
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc.name) for doc in available_docs[:10])}...
 
 **Engineering Focus Areas:**
 - Calibration management
@@ -444,15 +445,18 @@ def query_erp_supplychain(query: str) -> str:
     **🔍 USES DATABASE INDEX: database_metadata/ERP_INDEX.txt**
     This index contains file locations, naming patterns, and batch mapping for all ERP documents.
     
-    **Tool: Vendor Qualification Extractor, Purchase Order & GRN Tracker, Material Reconciliation Analyzer**
+    **Tool: Vendor Qualification Extractor, Purchase Order & GRN Tracker, Material Reconciliation Analyzer, SDS/MSDS Retriever**
     
     Args:
-        query: User query about GRN, PO, vendors, materials, etc.
+        query: User query about GRN, PO, vendors, materials, SDS, safety data sheets, etc.
         
     Returns:
-        JSON string with parsed PO/Requisition data from APQR_Segregated/ERP/
+        JSON string with parsed PO/Requisition/SDS data from APQR_Segregated/ERP/
     """
     logger.info(f"📦 ERP Supply Chain Tool called with query: {query}")
+    
+    # Check if this is an SDS query
+    is_sds_query = any(keyword in query.lower() for keyword in ['sds', 'safety data sheet', 'msds', 'material safety', 'hazard', 'safety'])
     
     try:
         # 🔍 NEW: Read the ERP database index for intelligent file search
@@ -463,6 +467,100 @@ def query_erp_supplychain(query: str) -> str:
         # List available ERP documents (recursively searches all subdirectories)
         available_docs = list_available_documents(ERP_DOCS_DIR)
         
+        # === HANDLE SDS QUERIES (Safety Data Sheets) ===
+        if is_sds_query:
+            logger.info("🔍 SDS query detected - searching for Safety Data Sheets")
+            
+            # Find all SDS/MSDS files
+            sds_docs = [doc for doc in available_docs if 'SDS' in doc.name.upper() or 'MSDS' in doc.name.upper()]
+            
+            if not sds_docs:
+                return json.dumps({
+                    "status": "no_information_found",
+                    "message": "No SDS (Safety Data Sheets) documents found in ERP directory",
+                    "query": query,
+                    "data_source": "APQR_Segregated/ERP/SupplyChain/",
+                    "search_note": "SDS files are typically stored with procurement/supply chain documents"
+                })
+            
+            logger.info(f"📋 Found {len(sds_docs)} SDS documents")
+            
+            # Extract material name from query if specified
+            material_keywords = {
+                'api': ['SDS_API', 'Salicylic'],
+                'binder': ['SDS_Binder', 'HPMC'],
+                'filler': ['SDS_Filler', 'MCC', 'Cellulose'],
+                'diluent': ['SDS_Filler', 'MCC', 'Cellulose'],
+                'disintegrant': ['SDS_Disintegrant', 'Cornstarch'],
+                'lubricant': ['SDS_Lubricant', 'Magnesium', 'Stearate'],
+                'pvc': ['PVC', 'Film'],
+                'foil': ['Foil', 'Lidding']
+            }
+            
+            # Filter SDS docs based on material mentioned in query
+            query_lower = query.lower()
+            filtered_sds = []
+            for material, patterns in material_keywords.items():
+                if material in query_lower:
+                    for doc in sds_docs:
+                        if any(pattern in doc.name for pattern in patterns):
+                            filtered_sds.append(doc)
+            
+            # If no specific material mentioned, return all SDS docs
+            if not filtered_sds:
+                filtered_sds = sds_docs
+            
+            # Parse SDS documents
+            parsed_sds = []
+            for doc_path in filtered_sds[:10]:  # Limit to 10 for performance
+                if doc_path.exists():
+                    logger.info(f"Parsing SDS document: {doc_path.name}")
+                    text = extract_text_from_pdf(str(doc_path))
+                    
+                    # Extract hazard info from SDS
+                    hazards = []
+                    if 'hazard' in text.lower():
+                        hazard_section = text[text.lower().find('hazard'):text.lower().find('hazard')+500]
+                        hazards.append(hazard_section[:200])
+                    
+                    parsed_sds.append({
+                        "filename": doc_path.name,
+                        "material": doc_path.name.replace('SDS_', '').replace('MSDS', '').replace('.pdf', ''),
+                        "document_type": "Safety Data Sheet (SDS)",
+                        "hazards_preview": hazards[0] if hazards else "See full document for hazard information",
+                        "file_path": str(doc_path),
+                        "batch_folder": doc_path.parent.parent.parent.name if len(doc_path.parents) >= 3 else "Unknown"
+                    })
+            
+            # Return formatted SDS data
+            result = f"""**📋 Safety Data Sheets (SDS) - Supply Chain**
+
+**Query:** {query}
+
+**Found {len(parsed_sds)} SDS document(s):**
+
+"""
+            for sds in parsed_sds:
+                result += f"""
+📄 **{sds['material']}**
+   - Document: {sds['filename']}
+   - Type: {sds['document_type']}
+   - Location: {sds['batch_folder']}
+   - Hazards: {sds['hazards_preview'][:150]}...
+   - Path: ...{sds['file_path'][-60:]}
+
+"""
+            
+            result += f"""
+**Data Source:** APQR_Segregated/ERP/SupplyChain/
+**Total SDS Files:** {len(sds_docs)}
+
+**💡 Tip:** SDS documents contain safety information including hazard statements, 
+handling precautions, and emergency procedures for each material.
+"""
+            return result
+        
+        # === HANDLE PURCHASE ORDER / PROCUREMENT QUERIES ===
         # 🔍 ENHANCED: Search for supply chain documents using multiple patterns
         # Pattern 1: "Purchase Order" or "Requisition" (Batch 1 style)
         # Pattern 2: Material names followed by ASP-25 (Batch 2-4 style: "Binder - ASP-25-002.docx")
@@ -474,8 +572,8 @@ def query_erp_supplychain(query: str) -> str:
         
         supply_chain_docs = []
         for doc in available_docs:
-            # Check if it's in SupplyChain folder
-            if 'SupplyChain' in str(doc):
+            # Check if it's in SupplyChain folder (exclude SDS files)
+            if 'SupplyChain' in str(doc) and 'SDS' not in doc.name and 'MSDS' not in doc.name:
                 # Pattern matching for supply chain documents
                 if any([
                     'Purchase Order' in doc.name,
@@ -555,24 +653,256 @@ def query_dms_qa(query: str) -> str:
     """
     Query Quality Assurance documents from DMS.
     
-    **🔍 USES DATABASE INDEX: database_metadata/DMS_INDEX.txt**
-    This index contains file locations, naming patterns, and document categorization for all DMS documents.
+    **🔍 USES SOP INDEX: output/sop_index.json**
+    This index contains comprehensive SOP metadata including version, title, department, dates, etc.
     
-    **Tool: CAPA Tracker, Change Control Parser, Training Effectiveness Evaluator**
+    **Tool: CAPA Tracker, Change Control Parser, Training Effectiveness Evaluator, SOP Version Tracker**
     
     Args:
-        query: User query about CAPA, change control, deviations, etc.
+        query: User query about CAPA, change control, deviations, SOPs, etc.
         
     Returns:
         Formatted string with QA documents from APQR_Segregated/DMS/
     """
     logger.info(f"📋 DMS QA Tool called with query: {query}")
     
-    # 🔍 NEW: Read the DMS database index for intelligent file search
-    dms_index = read_database_index("DMS")
-    if dms_index:
-        logger.info("✅ DMS database index loaded for intelligent file search")
+    # 🔍 Load SOP index for intelligent SOP search
+    sop_index_path = Path(__file__).parent.parent / "output" / "sop_index.json"
+    sop_index = {}
+    if sop_index_path.exists():
+        with open(sop_index_path, 'r', encoding='utf-8') as f:
+            sop_index = json.load(f)
+        logger.info(f"✅ SOP index loaded: {sop_index['metadata']['total_sops']} SOPs indexed")
     
+    # Check if query is SOP-related
+    is_sop_query = any(keyword in query.lower() for keyword in ['sop', 'standard operating procedure', 'version', 'procedure', 'bmr', 'ppe', 'hplc', 'batch', 'safety', 'equipment', 'manufacturing', 'packaging', 'warehouse', 'calibration', 'cleaning', 'sampling'])
+    
+    if is_sop_query and sop_index:
+        # === SEMANTIC SEARCH: Search by keywords/aliases, not just SOP number ===
+        query_lower = query.lower()
+        
+        # Extract search terms from query
+        search_terms = re.findall(r'\b[a-z]{3,}\b', query_lower)
+        
+        # Search for SOPs by semantic matching
+        matching_sops = {}
+        
+        for sop_key, sop_data in sop_index['sops'].items():
+            score = 0
+            
+            # Check aliases (high priority - exact match)
+            if sop_data.get('aliases'):
+                for alias in sop_data['aliases']:
+                    if alias in query_lower:
+                        score += 10  # High score for alias match
+            
+            # Check keywords (medium priority)
+            if sop_data.get('keywords'):
+                for keyword in sop_data['keywords']:
+                    if keyword in search_terms:
+                        score += 5  # Medium score for keyword match
+            
+            # Check title (medium priority)
+            if sop_data.get('title'):
+                title_lower = sop_data['title'].lower()
+                for term in search_terms:
+                    if term in title_lower:
+                        score += 3
+            
+            # Check purpose (low priority)
+            if sop_data.get('purpose'):
+                purpose_lower = sop_data['purpose'].lower()
+                for term in search_terms:
+                    if term in purpose_lower:
+                        score += 1
+            
+            # Check department match
+            if sop_data.get('department'):
+                dept_lower = sop_data['department'].lower()
+                if any(term in dept_lower for term in search_terms):
+                    score += 2
+            
+            if score > 0:
+                matching_sops[sop_key] = (sop_data, score)
+        
+        # If semantic search found matches, return them
+        if matching_sops:
+            # Sort by score (highest first)
+            sorted_matches = sorted(matching_sops.items(), key=lambda x: x[1][1], reverse=True)
+            
+            # If only one strong match, show details
+            if len(sorted_matches) == 1 or (len(sorted_matches) > 1 and sorted_matches[0][1][1] >= 10):
+                top_match = sorted_matches[0]
+                sop_data = top_match[1][0]
+                
+                # Find all versions of this SOP
+                base_sop_number = sop_data['sop_number']
+                all_versions = {k: v for k, v in sop_index['sops'].items() if base_sop_number and base_sop_number in k}
+                
+                if len(all_versions) > 1:
+                    # Multiple versions found
+                    result = f"""**📋 SOP Query Result - Semantic Search**
+
+**Query:** {query}
+
+**Found:** {sop_data['sop_number']} ({len(all_versions)} version(s))
+**Matched by:** {', '.join(sop_data.get('aliases', [])[:3]) if sop_data.get('aliases') else 'keywords'}
+
+"""
+                    for sop_key_inner, sop_data_inner in sorted(all_versions.items(), key=lambda x: x[1].get('version', '0'), reverse=True):
+                        result += f"""
+📄 **{sop_data_inner['sop_number']} - Version {sop_data_inner['version']}**
+   - **Title:** {sop_data_inner['full_title'] if sop_data_inner.get('full_title') else sop_data_inner.get('title', 'Not available')}
+   - **Department:** {sop_data_inner['department']}
+   - **Version:** {sop_data_inner['version']}
+   - **Effective Date:** {sop_data_inner['effective_date'] if sop_data_inner['effective_date'] else 'Not available'}
+   - **Aliases:** {', '.join(sop_data_inner.get('aliases', [])) if sop_data_inner.get('aliases') else 'None'}
+   - **File:** {sop_data_inner['file_name']}
+
+"""
+                    
+                    # Identify current (latest) version
+                    latest_version = max(all_versions.items(), key=lambda x: float(x[1].get('version', 0) or 0))
+                    result += f"✅ **Current Version:** {latest_version[1]['version']}\n"
+                    result += f"📅 **Indexed at:** {sop_index['metadata']['indexed_at']}\n"
+                    
+                    return result
+                
+                else:
+                    # Single version
+                    result = f"""**📋 SOP Query Result - Semantic Search**
+
+**Query:** {query}
+
+**Found:** {sop_data['sop_number']}
+**Matched by:** {', '.join(sop_data.get('aliases', [])[:3]) if sop_data.get('aliases') else 'keywords'}
+
+📄 **{sop_data['sop_number']} - Version {sop_data['version']}**
+   - **Title:** {sop_data['full_title'] if sop_data.get('full_title') else sop_data.get('title', 'Not available')}
+   - **Department:** {sop_data['department']}
+   - **Version:** {sop_data['version']}
+   - **Effective Date:** {sop_data['effective_date'] if sop_data['effective_date'] else 'Not available'}
+   - **Aliases:** {', '.join(sop_data.get('aliases', [])) if sop_data.get('aliases') else 'None'}
+   - **Purpose:** {sop_data.get('purpose', 'Not available')[:200]}...
+   - **File:** {sop_data['file_name']}
+   - **Path:** ...{sop_data['file_path'][-60:]}
+
+📅 **Indexed at:** {sop_index['metadata']['indexed_at']}
+"""
+                    return result
+            
+            else:
+                # Multiple matches - show list
+                result = f"""**📋 SOP Query Results - Semantic Search**
+
+**Query:** {query}
+
+**Found {len(sorted_matches)} matching SOP(s):**
+
+"""
+                for sop_key, (sop_data, score) in sorted_matches[:10]:  # Limit to top 10
+                    # Only show latest version (skip versioned keys)
+                    if '_v' not in sop_key:
+                        result += f"""
+📄 **{sop_data['sop_number']}** (v{sop_data.get('version', '?')})
+   - {sop_data.get('title', 'No title')[:80]}...
+   - Department: {sop_data.get('department', 'Unknown')}
+   - Matches: {', '.join(sop_data.get('aliases', [])[:3]) if sop_data.get('aliases') else 'keywords'}
+
+"""
+                
+                result += f"\n💡 **Tip:** Ask for a specific SOP number for detailed information (e.g., 'What is SOP-PROD-001?')\n"
+                result += f"📅 **Indexed at:** {sop_index['metadata']['indexed_at']}\n"
+                
+                return result
+        
+        # === EXACT SOP NUMBER SEARCH (original logic) ===
+        # Search for specific SOP in query
+        sop_match = re.search(r'SOP[_-]([A-Z]+)[_-](\d+)', query, re.IGNORECASE)
+        
+        if sop_match:
+            # Specific SOP requested
+            dept_code = sop_match.group(1).upper()
+            number = sop_match.group(2)
+            sop_number = f"SOP-{dept_code}-{number}"
+            
+            # Find all versions of this SOP
+            matching_sops = {k: v for k, v in sop_index['sops'].items() if sop_number in k}
+            
+            if matching_sops:
+                result = f"""**📋 SOP Query Result**
+
+**Query:** {query}
+
+**SOP Number:** {sop_number}
+
+**Found {len(matching_sops)} version(s):**
+
+"""
+                for sop_key, sop_data in sorted(matching_sops.items(), key=lambda x: x[1].get('version', '0'), reverse=True):
+                    result += f"""
+📄 **{sop_data['sop_number']} - Version {sop_data['version']}**
+   - **Title:** {sop_data['title'] if sop_data['title'] else 'Not available'}
+   - **Department:** {sop_data['department']}
+   - **Version:** {sop_data['version']}
+   - **Effective Date:** {sop_data['effective_date'] if sop_data['effective_date'] else 'Not available'}
+   - **Approved By:** {sop_data['approved_by'] if sop_data['approved_by'] else 'Not available'}
+   - **File:** {sop_data['file_name']}
+   - **Path:** ...{sop_data['file_path'][-60:]}
+
+"""
+                
+                # Identify current (latest) version
+                latest_version = max(matching_sops.items(), key=lambda x: float(x[1].get('version', 0) or 0))
+                result += f"✅ **Current Version:** {latest_version[1]['version']}\n"
+                result += f"📅 **Indexed at:** {sop_index['metadata']['indexed_at']}\n"
+                
+                return result
+            else:
+                return f"""**📋 SOP Query Result**
+
+**Query:** {query}
+
+⚠️ **SOP Not Found:** {sop_number}
+
+Please check the SOP number or list all SOPs using: "List all SOPs"
+"""
+        
+        else:
+            # General SOP query - list all SOPs
+            if 'list' in query.lower() or 'all' in query.lower():
+                # Group by department
+                by_department = {}
+                for sop_key, sop_data in sop_index['sops'].items():
+                    # Only show latest version (exclude versioned keys like "SOP-X_v2")
+                    if '_v' not in sop_key:
+                        dept = sop_data.get('department', 'Unknown')
+                        if dept not in by_department:
+                            by_department[dept] = []
+                        by_department[dept].append(sop_data)
+                
+                result = f"""**📋 Standard Operating Procedures (SOPs) in DMS**
+
+**Query:** {query}
+
+**Total SOPs:** {sop_index['metadata']['total_sops']} documents
+**Latest Versions:** {len([k for k in sop_index['sops'].keys() if '_v' not in k])} SOPs
+
+**SOPs by Department:**
+
+"""
+                for dept, sops in sorted(by_department.items()):
+                    result += f"\n**{dept}**\n"
+                    for sop in sorted(sops, key=lambda x: x.get('sop_number', '')):
+                        version_info = f"v{sop.get('version', '?')}" if sop.get('version') else ''
+                        result += f"- {sop.get('sop_number', 'Unknown')} {version_info}\n"
+                
+                result += f"\n📅 **Index last updated:** {sop_index['metadata']['indexed_at']}\n"
+                result += f"📊 **Data Source:** {sop_index['metadata']['dms_path']}\n"
+                
+                return result
+    
+    # Fall back to general DMS QA query
     # List available DMS documents
     available_docs = list_available_documents(DMS_DOCS_DIR)
     sds_docs = [doc for doc in available_docs if 'SDS' in doc.name.upper()]
@@ -605,6 +935,7 @@ def query_dms_qa(query: str) -> str:
 - ✅ Change Control Parser: Parse and track change controls
 - ✅ Training Effectiveness Evaluator: Evaluate training outcomes
 - ✅ Deviation management and trending
+- ✅ SOP Version Tracker: Track SOP versions and metadata ({sop_index['metadata']['total_sops']} SOPs indexed)
 
 **Available Data Types:**
 - CAPA (Corrective and Preventive Actions)
@@ -613,14 +944,16 @@ def query_dms_qa(query: str) -> str:
 - Non-conformance records
 - Quality investigations
 - Safety Data Sheets (SDS)
+- Standard Operating Procedures (SOPs) - {sop_index['metadata']['total_sops']} documents
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc.name) for doc in available_docs[:10])}...
 
 **QA Focus Areas:**
 - CAPA effectiveness
 - Change control compliance
 - Deviation trending
 - Quality metrics
+- SOP version control
 """
     
     return result
@@ -736,7 +1069,7 @@ def query_dms_management(query: str) -> str:
 - Executive summaries
 - Quality metrics dashboards
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc.name) for doc in available_docs[:10])}...
 
 **Management Focus:**
 - Audit response and CAPA
@@ -797,7 +1130,7 @@ def query_dms_training(query: str) -> str:
 - Attendance records
 - Qualification documentation
 
-**Documents:** {', '.join(available_docs)}
+**Documents:** {', '.join(str(doc.name) for doc in available_docs[:10])}...
 
 **Training Focus:**
 - Competency verification

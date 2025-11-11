@@ -71,6 +71,31 @@ from .tools import (
     query_dms_training
 )
 
+# Import APQR Data Filler tools
+from .apqr_filler_tools import (
+    get_available_batches,
+    extract_section_data,
+    fill_apqr_template,
+    mark_missing_data,
+    generate_trend_csv,
+    create_completion_report,
+    generate_partial_doc,
+    export_apqr_draft,
+    generate_complete_apqr_document
+)
+
+# Import APQR Generator from Real Data (Database Extraction)
+from .apqr_generator_from_index import (
+    generate_apqr_from_real_data
+)
+
+# Import Document Renderer tools
+from .document_renderer import (
+    docx_to_html,
+    docx_to_markdown,
+    render_apqr_for_display
+)
+
 __all__ = [
     # PDF Tools
     'extract_text_from_pdf',
@@ -121,5 +146,22 @@ __all__ = [
     'query_dms_qa',
     'query_dms_regulatory',
     'query_dms_management',
-    'query_dms_training'
+    'query_dms_training',
+    
+    # APQR Data Filler Tools
+    'get_available_batches',
+    'extract_section_data',
+    'fill_apqr_template',
+    'mark_missing_data',
+    'generate_trend_csv',
+    'create_completion_report',
+    'generate_partial_doc',
+    'export_apqr_draft',
+    'generate_complete_apqr_document',
+    'generate_apqr_from_real_data',  # Extract from database, not fabricate
+    
+    # Document Renderer Tools
+    'docx_to_html',
+    'docx_to_markdown',
+    'render_apqr_for_display'
 ]
